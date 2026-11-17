@@ -2319,7 +2319,8 @@ const TECH=[
 ['cure','Cure','cure',3,8,2,'silky',[0,.8,.5,0,0,0,0],.1,'1311000000','cured %','mushy',0],
 ['smoke','Smoke','smoke',3,7,2,'tender',[0,0,0,.5,.8,0,0],.12,'3221020020','smoked %','acrid',1],
 ['whip','Whip into a mousse','whip',5,0,2,'airy',[0,0,0,0,0,0,.4],.1,'0001031100','% mousse','split',0],
-['toast','Toast into a crumb','toast',2,1,1,'crunchy',[0,0,0,.2,0,0,0],.08,'0000302031','toasted % crumb','burnt',1]
+['toast','Toast into a crumb','toast',2,1,1,'crunchy',[0,0,0,.2,0,0,0],.08,'0000302031','toasted % crumb','burnt',1],
+['soup','Simmer into a soup','make soup from',4,10,2,'brothy',[0,.3,0,0,.5,0,0],.06,'2331210312','% soup','thin and watery',0]
 ].map(r=>({id:r[0],name:r[1],verb:r[2],a:r[3],p:r[4],lvl:r[5],tex:r[6],d:r[7],risk:r[8],fits:r[9],ph:r[10],flaw:r[11],burn:r[12]}));
 const T={};TECH.forEach(t=>T[t.id]=t);
 // id|name|emoji|category|flavour (sweet salty sour bitter umami heat rich)|texture|colour|courses|oddball|fit overrides|hint
@@ -2328,7 +2329,7 @@ duck|Duck breast|🦆|P|0100304|tender|r|ae|0|smoke3,cure2,boil0,fry1|A thick fa
 pork|Pork tenderloin|🐖|P|0100302|tender|n|ae|0|cure0|Lean. It dries out fast.
 lamb|Lamb chops|🍖|P|0100403|tender|r|e|0||Takes fierce heat and smoke.
 chick|Chicken thighs|🍗|P|0100302|tender|w|ae|0|fry3|Forgiving, as long as it is cooked through.
-steak|Skirt steak|🥩|P|0100403|chewy|r|ae|0|raw2,cure2,braise1,poach0|Fine raw if you cut it small. Tough when stewed in a hurry.
+steak|Skirt steak|🥩|P|0100403|chewy|r|ae|0|raw2,cure2,braise1,poach0,soup1|Fine raw if you cut it small. Tough when stewed in a hurry.
 tongue|Beef tongue|👅|P|0100403|chewy|n|e|1|braise3,sear1,grill1,roast1,smoke2,fry1|It needs long, wet heat before anything else.
 hotdog|Hot dogs|🌭|P|1300303|soft|n|ae|1|fry3,grill3,braise1,roast2,puree1|Already cooked, already salty.
 tofu|Silken tofu|🧊|P|0000101|soft|w|aed|0|raw2,fry3,sear2,puree3,whip3,churn2,grill0,roast1,braise2,smoke2|A blank canvas that blends to a cream.
@@ -2336,24 +2337,24 @@ liver|Chicken livers|🫀|P|0100503|soft|b|ae|1|sear3,puree2,whip2,fry2,braise1,
 salmon|Salmon fillet|🐟|S|0100303|silky|o|ae|0|smoke3,braise0|Fatty enough to cure, smoke or sear.
 shrimp|Tiger shrimp|🦐|S|1100201|snappy|n|ae|0|raw1|Seconds separate perfect from rubber.
 squid|Squid|🦑|S|0100201|chewy|w|ae|0|raw1,braise3,poach1,roast1|Cook it for two minutes or for forty. Nothing in between.
-crab|Crab meat|🦀|S|1200301|soft|w|a|0|sear1,grill0,smoke1,cure1|Sweet, delicate and already cooked.
-lobster|Lobster tail|🦞|S|1100302|tender|r|ae|0|raw1,cure1,smoke1|Butter is its best friend. Overcooking is its worst enemy.
+crab|Crab meat|🦀|S|1200301|soft|w|a|0|sear1,grill0,smoke1,cure1,soup3|Sweet, delicate and already cooked.
+lobster|Lobster tail|🦞|S|1100302|tender|r|ae|0|raw1,cure1,smoke1,soup3|Butter is its best friend. Overcooking is its worst enemy.
 oyster|Oysters|🦪|S|0301301|silky|w|a|0|raw3,cure2,sear1,roast2,grill2,boil0,poach2,smoke3|Briny. The less you do, the better.
 octo|Octopus|🐙|S|0100301|chewy|p|ae|1|raw0,cure0,braise3,boil3,sear1,grill2,fry1,poach2|It must be tenderised with slow, wet heat.
 sardine|Tinned sardines|🥫|S|0300503|soft|b|ae|1|raw2,cure0,poach0,boil0,puree2,fry2|Oily, loud and already cooked.
 eggplant|Eggplant|🍆|V|0001001|soft|p|ae|0|raw0,fry3,puree3,smoke3|Bitter and spongy raw. It loves fire.
 carrot|Heirloom carrots|🥕|V|2000000|crunchy|o|aed|0|bake3,caramel3|Sweet enough for the pastry station.
-corn|Sweet corn|🌽|V|3000100|crisp|y|aed|0|churn2,puree3,bake2|Milky and sweet. It crosses over to dessert easily.
+corn|Sweet corn|🌽|V|3000100|crisp|y|aed|0|churn2,puree3,bake2,soup3|Milky and sweet. It crosses over to dessert easily.
 broc|Broccoli|🥦|V|0001100|crunchy|g|ae|0||Chars well. Goes grey if boiled too long.
 kale|Tuscan kale|🥬|V|0002000|chewy|g|ae|0|fry3,raw1,puree2|Bitter and tough until it is crisped or wilted.
-pump|Pumpkin|🎃|V|2000001|soft|o|aed|0|raw0,bake3,churn2,puree3|Starchy and sweet. Useless raw.
+pump|Pumpkin|🎃|V|2000001|soft|o|aed|0|raw0,bake3,churn2,puree3,soup3|Starchy and sweet. Useless raw.
 pepper|Bell peppers|🫑|V|1001000|crisp|g|ae|0||Roast them until the skins blister.
 dill|Dill pickles|🥒|V|0340000|snappy|g|ae|1|raw3,fry3,pickle0,puree2,grill1,sear0,roast0,braise1|Sour and salty already. Fry them or leave them alone.
-avo|Avocado|🥑|V|0000004|creamy|g|aed|0|raw3,puree3,churn3,whip2,fry2,grill2,roast0,braise0,boil0,sear1,pickle1|It turns bitter when cooked through.
+avo|Avocado|🥑|V|0000004|creamy|g|aed|0|raw3,puree3,churn3,whip2,fry2,grill2,roast0,braise0,boil0,sear1,pickle1,soup2|It turns bitter when cooked through.
 olive|Green olives|🫒|V|0312002|firm|g|ae|0|raw3,fry2,puree3,braise2,pickle1,caramel0|Salt and fat in one bite.
 peas|Sugar snap peas|🫛|V|2000000|crisp|g|ae|0|raw3,braise0,roast1|Sweet and snappy. Barely cook them.
 yam|Sweet potato|🍠|V|3000001|soft|o|aed|0|raw0,fry3,bake3,puree3,churn2|Dense and sweet. It needs real cooking time.
-melon|Watermelon|🍉|F|3000000|crisp|r|aed|0|grill3,pickle3,sear2,roast0,bake0|Grill it or pickle it. It weeps in an oven.
+melon|Watermelon|🍉|F|3000000|crisp|r|aed|0|grill3,pickle3,sear2,roast0,bake0,soup2|Grill it or pickle it. It weeps in an oven.
 pine|Pineapple|🍍|F|3020000|juicy|y|aed|0|grill3,roast3,caramel3,whip0|Raw, its enzymes stop dairy from setting.
 mango|Mango|🥭|F|4010000|soft|o|aed|0|pickle3,bake1|Very sweet. It wants acid or chili.
 peach|Peaches|🍑|F|3010000|soft|o|aed|0|grill3,roast3|Fire brings out the sugar.
@@ -2367,16 +2368,16 @@ coco|Fresh coconut|🥥|F|1000003|chewy|w|aed|0|toast3,puree2,pickle0,poach0,gri
 kiwi|Kiwi|🥝|F|2030000|soft|g|ad|0|whip0,bake0,roast0,grill1|Raw kiwi curdles dairy.
 apple|Green apples|🍏|F|2030000|crisp|g|aed|0|bake3,caramel3|Tart and firm. It holds its shape in heat.
 orange|Blood oranges|🍊|F|2031000|juicy|r|aed|0|reduce3|Bittersweet. The juice reduces to a fine glaze.
-ramen|Instant ramen|🍜|C|0200201|soft|y|ae|1|boil3,fry3,toast3,bake1,puree0|Crush it for crunch or fry it into a nest.
-pretzel|Hard pretzels|🥨|C|0300000|crunchy|b|aed|1|toast3,bake2,raw2,caramel2,boil0,fry1,puree1|Salt and crunch. Soggy the moment it gets wet.
+ramen|Instant ramen|🍜|C|0200201|soft|y|ae|1|boil3,fry3,toast3,bake1,puree0,soup3|Crush it for crunch or fry it into a nest.
+pretzel|Hard pretzels|🥨|C|0300000|crunchy|b|aed|1|toast3,bake2,raw2,caramel2,boil0,fry1,puree1,soup0|Salt and crunch. Soggy the moment it gets wet.
 bagel|Everything bagels|🥯|C|0200100|chewy|b|ae|1|toast3,bake2,fry2,boil0,raw1|Seeds, garlic and chew.
 crois|Croissants|🥐|C|1100004|crisp|b|aed|1|toast3,bake3,raw2,fry1,boil0|Mostly butter. Makes a superb bread pudding.
 tort|Corn tortillas|🫓|C|0100000|soft|y|ae|0|fry3,toast3,grill2,bake2,boil1|Fry them and they shatter.
-popcorn|Popcorn|🍿|C|0200000|crunchy|w|aed|1|raw2,toast2,caramel3,puree2,churn2,boil0,fry0,bake1|Steep it in cream or coat it in caramel.
+popcorn|Popcorn|🍿|C|0200000|crunchy|w|aed|1|raw2,toast2,caramel3,puree2,churn2,boil0,fry0,bake1,soup0|Steep it in cream or coat it in caramel.
 waffle|Frozen waffles|🧇|C|2100001|crisp|y|aed|1|toast3,bake3,fry2,boil0|Sweet batter, already cooked.
 fries|Frozen fries|🍟|C|0100001|crisp|y|ae|1|fry3,roast2,bake2,puree2,boil1,toast1|Potato with a head start.
-chickp|Chickpeas|🫘|C|0000101|firm|y|aed|0|fry3,roast3,puree3,boil2,bake2,toast1,whip2|The canning liquid whips like egg white.
-dump|Dumpling wrappers|🥟|C|0000000|soft|w|aed|0|fry3,boil3,bake2,toast1,raw0|Thin dough. Fry it for crunch.
+chickp|Chickpeas|🫘|C|0000101|firm|y|aed|0|fry3,roast3,puree3,boil2,bake2,toast1,whip2,soup3|The canning liquid whips like egg white.
+dump|Dumpling wrappers|🥟|C|0000000|soft|w|aed|0|fry3,boil3,bake2,toast1,raw0,soup3|Thin dough. Fry it for crunch.
 bluech|Blue cheese|🧀|D|0402403|creamy|w|aed|1|raw3,whip2,churn2,puree2,bake2,reduce1,fry1,smoke1|Funky and salty. It gets along with sweet things.
 icecream|Vanilla ice cream|🍨|D|4000003|frozen|w|d|1|raw2,whip2,reduce2,fry2,churn1,bake1|Melted, it is a ready-made custard.
 flan|Caramel flan|🍮|D|4000002|silky|y|d|1|raw2,puree2,whip2,churn3,bake2,reduce1|Set custard. It blends into a rich base.
@@ -2384,7 +2385,7 @@ goat|Goat cheese|🐐|D|0202202|creamy|w|aed|0|raw3,whip3,fry2,bake2,churn2|Tang
 gummy|Gummy bears|🧸|W|5010000|chewy|r|ad|1|reduce3,raw1,churn1,caramel1,bake0,toast0,whip0,fry0|Melt them. The gelatin sets a glaze.
 donut|Glazed donuts|🍩|W|4000003|soft|b|aed|1|bake3,toast2,sear2,grill2,churn2,raw1,puree1,fry1|Fried dough and sugar. Griddle it.
 cookie|Sandwich cookies|🍪|W|4001002|crunchy|k|d|1|toast3,churn3,raw2,bake2,puree2,fry2,whip1|Cocoa and cream. An instant crumb.
-choc|Dark chocolate|🍫|W|2003003|snappy|k|ed|0|reduce3,whip3,churn3,bake3,raw2,caramel0,toast0,fry0|It seizes if water gets in. Melt it gently.
+choc|Dark chocolate|🍫|W|2003003|snappy|k|ed|0|reduce3,whip3,churn3,bake3,raw2,caramel0,toast0,fry0,soup0|It seizes if water gets in. Melt it gently.
 cake|Birthday cake|🍰|W|5000003|soft|n|d|1|toast3,churn2,fry2,raw1,bake1,puree1,whip1|Too sweet as it comes. Dry it into crumbs.
 candy|Peppermint candies|🍬|W|5000000|brittle|r|d|1|reduce3,raw2,churn2,caramel1,bake1,whip1,toast0|Crush for sparkle or melt into syrup.
 mochi|Mochi|🍡|W|3000000|chewy|n|d|1|grill3,fry3,toast2,raw2,bake2,churn1,reduce0|Rice dough. It blisters and puffs over heat.
@@ -2415,16 +2416,16 @@ frog|Frog legs|🐸|P|0100201|tender|w|ae|1|fry3,sear3,grill2,poach2|Tastes of c
 snail|Snails|🐌|S|0100201|chewy|b|a|1|sear3,roast3,braise2,fry2,poach2,raw0,cure0|Garlic butter exists for a reason.
 scallop|Sea scallops|🐚|S|1100301|silky|w|ae|0|sear3,raw3,cure3,braise0,boil0|Sweet. A hard sear, one side only.
 tuna|Tuna loin|🍣|S|0100402|silky|r|ae|0|raw3,sear3,cure3,braise0,boil0,poach1|Best raw or barely seared.
-mussel|Mussels|🦪|S|0200301|soft|k|ae|0|poach3,boil3,braise2,smoke2,grill2,sear1,raw0,cure0|Steam them open in something aromatic.
+mussel|Mussels|🦪|S|0200301|soft|k|ae|0|poach3,boil3,braise2,smoke2,grill2,sear1,raw0,cure0,soup3|Steam them open in something aromatic.
 anchovy|Anchovies|🐟|S|0500500|soft|b|ae|1|raw3,puree3,fry2,sear1,poach0,boil0,cure0|Salt bombs that melt into sauces.
-roe|Trout roe|🟠|S|0400302|juicy|o|a|1|raw3,cure1,smoke1,sear0,grill0,roast0,fry0,braise0,poach0,boil0|Pops of brine. Heat destroys it.
+roe|Trout roe|🟠|S|0400302|juicy|o|a|1|raw3,cure1,smoke1,sear0,grill0,roast0,fry0,braise0,poach0,boil0,soup0|Pops of brine. Heat destroys it.
 eel|Smoked eel|🐍|S|1200404|silky|b|ae|1|raw3,grill3,sear2,puree2,smoke1,cure0,boil0|Rich, sweet and already smoked.
-kingmush|King oyster mushrooms|🍄|V|0000301|chewy|w|ae|0|sear3,grill3,roast3,raw0|Meaty. Score and sear them like scallops.
+kingmush|King oyster mushrooms|🍄|V|0000301|chewy|w|ae|0|sear3,grill3,roast3,raw0,soup3|Meaty. Score and sear them like scallops.
 aspar|Asparagus|🎋|V|1001100|crisp|g|ae|0|grill3,raw2,poach2|Snap, char, done.
-leek|Leeks|🌱|V|2000100|soft|g|ae|0|braise3,grill3,fry3,raw0|Sweet when melted, bitter when burnt.
+leek|Leeks|🌱|V|2000100|soft|g|ae|0|braise3,grill3,fry3,raw0,soup3|Sweet when melted, bitter when burnt.
 radish|Radishes|🔴|V|0001010|crunchy|r|ae|0|raw3,pickle3,roast2,braise1|Peppery crunch.
 beet|Beets|🟣|V|3001000|firm|p|aed|0|roast3,pickle3,puree3,bake3,raw2,churn2|Earthy and sweet. It stains everything.
-cauli|Cauliflower|🥦|V|0000100|crunchy|w|ae|0|roast3,puree3,fry3,pickle3,raw1|Roasts like a steak, blends like cream.
+cauli|Cauliflower|🥦|V|0000100|crunchy|w|ae|0|roast3,puree3,fry3,pickle3,raw1,soup3|Roasts like a steak, blends like cream.
 fennel|Fennel|🌿|V|1001000|crunchy|w|ae|0|raw3,braise3,roast3,pickle3|Anise crunch raw, sweet when braised.
 arti|Artichokes|🌵|V|0002100|firm|g|ae|0|fry3,braise3,grill3,puree2,raw0|All preparation. Worth it fried.
 zucch|Zucchini|🥒|V|0000000|soft|g|ae|0|grill3,fry3,bake3,raw2,boil0|Watery. Char it fast or shave it raw.
@@ -2438,7 +2439,7 @@ pom|Pomegranate|🍎|F|2030000|juicy|r|aed|0|raw3,reduce3,puree1,roast0,grill0,s
 lychee|Lychees|⚪|F|4010000|juicy|w|ad|0|raw3,poach3,churn3,grill1|Floral and very sweet.
 plum|Plums|🍑|F|2030000|juicy|p|aed|0|roast3,poach3,pickle3|Tart skin, sweet flesh.
 rhubarb|Rhubarb|🌺|F|0040000|crisp|r|aed|0|poach3,roast3,pickle3,reduce3,bake3,raw1|Pure sourness. It needs sugar.
-cant|Cantaloupe|🍈|F|3000000|soft|o|aed|0|raw3,churn3,grill2,pickle2,roast0,bake0|Perfumed. Salt and cured meat flatter it.
+cant|Cantaloupe|🍈|F|3000000|soft|o|aed|0|raw3,churn3,grill2,pickle2,roast0,bake0,soup2|Perfumed. Salt and cured meat flatter it.
 gfruit|Grapefruit|🍊|F|1032000|juicy|r|aed|0|raw3,reduce3,caramel3,grill2|Bitter and sour. Brûlée the cut face.
 date|Medjool dates|🌴|F|5000000|chewy|b|aed|0|raw3,puree3,bake3,roast2,fry2,reduce2|Caramel that grows on trees.
 cranb|Cranberries|🔴|F|1041000|firm|r|aed|0|reduce3,pickle3,bake3,roast2,raw1|Mouth-puckering until cooked with sugar.
@@ -2447,11 +2448,11 @@ durian|Durian|🦔|F|3000103|creamy|y|d|1|churn3,puree3,raw2,whip2,fry2,bake2|Cu
 quinoa|Quinoa|🌾|C|0001000|soft|w|ae|0|boil3,toast3,fry2,bake2,puree1|Nutty. Toast it for crunch.
 cornmeal|Cornmeal|🟡|C|1000000|powder|y|aed|0|boil3,fry3,bake3,toast1,raw0|Polenta, cornbread or a crisp crust.
 gnocchi|Potato gnocchi|🥔|C|0100000|soft|w|ae|0|boil3,sear3,fry3,bake2,toast0|Boil, then brown in butter.
-rnoodle|Rice noodles|🍜|C|0000000|soft|w|ae|0|boil3,fry3,toast1,raw0|Soak them. Fry them for a nest.
-lentil|Black lentils|⚫|C|0001101|firm|k|ae|0|boil3,braise3,fry2,puree2|Earthy. They hold their shape.
+rnoodle|Rice noodles|🍜|C|0000000|soft|w|ae|0|boil3,fry3,toast1,raw0,soup3|Soak them. Fry them for a nest.
+lentil|Black lentils|⚫|C|0001101|firm|k|ae|0|boil3,braise3,fry2,puree2,soup3|Earthy. They hold their shape.
 dough|Pizza dough|🍕|C|0100000|chewy|w|aed|1|bake3,fry3,grill3,boil1,toast1,raw0|Flatbread, fritters or dumplings.
 cereal|Sugary cereal|🥣|C|4000000|crunchy|y|d|1|toast3,churn3,raw2,bake2,puree2,boil0,fry0|Steep it in milk for cereal-milk ice cream.
-chips|Potato chips|🥔|C|0300002|crunchy|y|aed|1|toast3,raw2,bake2,caramel2,puree1,fry0,boil0|Salt and crunch. A crust or a crumble.
+chips|Potato chips|🥔|C|0300002|crunchy|y|aed|1|toast3,raw2,bake2,caramel2,puree1,fry0,boil0,soup0|Salt and crunch. A crust or a crumble.
 tots|Tater tots|🟫|C|0200002|crisp|y|ae|1|fry3,bake3,roast3,puree2,boil0|Shredded potato, already par-fried.
 rye|Rye bread|🍞|C|0101100|chewy|b|ae|0|toast3,fry3,bake2,puree1|Caraway and sourness.
 ricotta|Ricotta|🧀|D|1100002|creamy|w|aed|0|raw3,whip3,bake3,fry2,churn2|Mild and milky. Sweet or savoury.
@@ -2485,15 +2486,15 @@ const RAW_PANTRY=`
 oil|Olive oil|🫗|X|0001005|liquid|y|||raw3|
 butter|Butter|🧈|D|0100005|creamy|y|||reduce3,sear1,caramel2|
 cream|Cream|🥛|D|1000004|liquid|w||||
-egg|Eggs|🥚|D|0000203|soft|y|||poach3,boil3,fry2,bake3,whip3,churn3,sear2,cure2,raw1|
+egg|Eggs|🥚|D|0000203|soft|y|||poach3,boil3,fry2,bake3,whip3,churn3,sear2,cure2,raw1,soup2|
 flour|Flour|🌾|C|0000000|powder|w|||bake3,fry3,toast1,boil0,raw0|
 sugar|Sugar|🥄|W|5000000|powder|w|||caramel3,reduce3,raw1,churn2,whip2|
 rice|Rice|🍚|C|0000000|soft|w|||boil3,fry2,toast2,puree1|
-potato|Potatoes|🥔|C|0000000|soft|y|||fry3,roast3,boil3,puree3,raw0,toast0|
-onion|Onions|🧅|V|2000100|crisp|w|||caramel3,pickle3,fry3,raw1|
+potato|Potatoes|🥔|C|0000000|soft|y|||fry3,roast3,boil3,puree3,raw0,toast0,soup3|
+onion|Onions|🧅|V|2000100|crisp|w|||caramel3,pickle3,fry3,raw1,soup3|
 garlic|Garlic|🧄|H|0001201|firm|w|||roast3,fry2,puree2,raw1,braise2|
 lemon|Lemons|🍋|F|0050000|juicy|y|||raw3,reduce2,cure2,pickle2|
-tomato|Tomatoes|🍅|V|1020300|juicy|r|||raw3,roast3,reduce3,puree3|
+tomato|Tomatoes|🍅|V|1020300|juicy|r|||raw3,roast3,reduce3,puree3,soup3|
 chili|Fresh chilies|🌶️|H|0000050|crisp|r|||raw3,pickle3,fry2,reduce2,roast2|
 ginger|Ginger|🫚|H|0001020|firm|y|||pickle3,fry2,reduce2|
 soy|Soy sauce|🥢|X|0500400|liquid|k||||
@@ -2503,11 +2504,11 @@ stock|Chicken stock|🍲|X|0200300|liquid|y||||
 wwine|White wine|🥂|X|0020000|liquid|y|||poach3,raw0|
 herbs|Soft herbs|🌿|H|0001000|soft|g|||puree3,fry2|
 mint|Mint|🍃|H|0001000|soft|g|||churn3,puree2|
-bacon|Bacon|🥓|P|0300404|crisp|r|||fry3,sear3,roast3,caramel2,bake2,braise2,raw0,poach0,cure0,churn1|
-mush|Mushrooms|🍄|V|0000300|soft|b|||sear3,roast3,pickle2|
+bacon|Bacon|🥓|P|0300404|crisp|r|||fry3,sear3,roast3,caramel2,bake2,braise2,raw0,poach0,cure0,churn1,soup2|
+mush|Mushrooms|🍄|V|0000300|soft|b|||sear3,roast3,pickle2,soup3|
 almond|Almonds|🌰|N|0000102|crunchy|b||||
-bread|Bread|🍞|C|0100000|soft|b|||toast3,fry3,bake2,grill2,puree1|
-greens|Salad greens|🥗|V|0001000|crisp|g|||raw3,roast0,grill0,braise0,fry0,boil0|
+bread|Bread|🍞|C|0100000|soft|b|||toast3,fry3,bake2,grill2,puree1,soup2|
+greens|Salad greens|🥗|V|0001000|crisp|g|||raw3,roast0,grill0,braise0,fry0,boil0,soup0|
 yogurt|Yogurt|🍦|D|0020002|creamy|w||||
 vanilla|Vanilla|🌼|H|1000000|soft|w|||churn3,whip2,bake2,reduce2|
 spice|Warm spices|🍂|H|0001010|powder|b|||toast3,bake2,braise2|
@@ -2517,7 +2518,7 @@ celery|Celery|🥬|V|0101000|crunchy|g|||raw3,pickle3,braise2|
 cabbage|Cabbage|🥬|V|1001000|crunchy|w|||raw3,pickle3,braise3,grill3|
 cucumber|Cucumber|🥒|V|0000000|crisp|g|||raw3,pickle3,grill1,sear0,roast0,braise0,fry0,boil0|
 spinach|Spinach|🥬|V|0001100|soft|g|||puree3,raw2,boil2,braise2,fry1|
-fpeas|Frozen peas|🫛|V|2000000|soft|g|||puree3,boil3,raw1|
+fpeas|Frozen peas|🫛|V|2000000|soft|g|||puree3,boil3,raw1,soup3|
 limes|Limes|🍋|F|0050000|juicy|g|||raw3,reduce2,cure2,pickle2|
 oranges|Oranges|🍊|F|3020000|juicy|o|||raw3,reduce3|
 rasp|Raspberries|🍓|F|2030000|soft|r|||raw3,reduce3,churn3,puree3|
@@ -2542,22 +2543,129 @@ balsamic|Balsamic vinegar|🧴|X|2031000|liquid|k|||reduce3,raw2|
 rvinegar|Red wine vinegar|🧴|X|0050000|liquid|r||||
 bstock|Beef stock|🍲|X|0200400|liquid|b||||
 rum|Dark rum|🥃|X|2001000|liquid|b|||reduce3,caramel3,churn2,raw0|
-parm|Parmesan|🧀|D|0301502|firm|y|||raw3,bake3,toast3,fry2,whip1|
-cheddar|Cheddar|🧀|D|0201303|firm|y|||bake3,raw2,fry2,reduce2|
+parm|Parmesan|🧀|D|0301502|firm|y|||raw3,bake3,toast3,fry2,whip1,soup2|
+cheddar|Cheddar|🧀|D|0201303|firm|y|||bake3,raw2,fry2,reduce2,soup3|
 creamch|Cream cheese|🥛|D|0110004|creamy|w|||raw3,whip3,bake3,churn3|
 sourcream|Sour cream|🥛|D|0020003|creamy|w|||raw3|
 milk|Milk|🥛|D|1000002|liquid|w||||
-pasta|Dried pasta|🍝|C|0000000|soft|y|||boil3,bake2,fry1,toast1,raw0|
+pasta|Dried pasta|🍝|C|0000000|soft|y|||boil3,bake2,fry1,toast1,raw0,soup3|
 panko|Panko crumbs|🍞|C|0000000|crunchy|w|||toast3,fry3|
 cstarch|Cornstarch|🌽|C|0000000|powder|w|||fry3,boil1,bake1,raw0|
 oats|Rolled oats|🌾|C|0000100|chewy|y|||toast3,bake3,boil3|
-wbeans|White beans|🫘|C|0000101|soft|w|||puree3,braise3,boil2,fry2|
+wbeans|White beans|🫘|C|0000101|soft|w|||puree3,braise3,boil2,fry2,soup3|
 bsugar|Brown sugar|🥄|W|5001000|powder|b|||caramel3,reduce3,bake3|
 cocoa|Cocoa powder|🍫|W|0003001|powder|k|||bake3,churn3,whip2,raw2,reduce2|
 wchoc|White chocolate|🍫|W|5000004|snappy|w|||reduce3,whip3,churn3,caramel3,bake2,raw2|
 gelatin|Gelatin|🧊|X|0000000|powder|w|||whip3,reduce2,poach1,raw0|
 walnut|Walnuts|🌰|N|0001103|crunchy|b||||
 peanuts|Peanuts|🥜|N|0100103|crunchy|b||||
+pcarrot|Carrots|🥕|V|2000000|crunchy|o|||roast3,pickle3,puree3,soup3|
+redpep|Red peppers|🫑|V|2001000|crisp|r|||roast3,grill3,raw2|
+redonion|Red onions|🧅|V|1001010|crisp|p|||pickle3,raw3,grill3|
+gbeans|Green beans|🫛|V|1001000|crisp|g|||fry3,pickle3,boil2,raw1|
+arugula|Arugula|🥬|V|0002010|soft|g|||raw3,puree2,boil0,roast0,braise0,fry0|
+cherrytom|Cherry tomatoes|🍅|V|2020200|juicy|r|||raw3,roast3,pickle2|
+sundried|Sun-dried tomatoes|🍅|V|2110400|chewy|r|||raw3,puree3|
+pickjal|Pickled jalapeños|🌶️|V|0230030|snappy|g|||raw3,fry2|
+kalamata|Kalamata olives|🫒|V|0402102|firm|p|||raw3,puree3,fry2|
+cornichon|Cornichons|🥒|V|0240000|snappy|g|||raw3,fry2|
+kraut|Sauerkraut|🥬|V|0240100|crunchy|w|||raw3,braise3,fry2|
+roastpep|Roasted peppers in oil|🫑|V|2011101|soft|r|||raw3,puree3|
+artiheart|Artichoke hearts|🌵|V|0111101|soft|g|||raw3,fry3,grill2,puree2|
+fcorn|Frozen corn|🌽|V|3000100|crisp|y|||puree3,sear2,grill2,boil2|
+edamame|Edamame|🫛|V|1000201|firm|g|||boil3,puree3,fry2,raw1|
+bsprouts|Bean sprouts|🌱|V|0000000|crisp|w|||raw3,fry2,pickle2|
+bokchoy|Bok choy|🥬|V|0001100|crisp|g|||sear3,grill3,braise2,boil2|
+papple|Apples|🍎|F|3010000|crisp|r|||bake3,caramel3,raw3|
+blackb|Blackberries|🫐|F|2030000|soft|p|||raw3,reduce3,bake3|
+apricot|Dried apricots|🍑|F|4020000|chewy|o|||poach3,bake3,puree2,raw2|
+dcherry|Dried cherries|🍒|F|3030000|chewy|r|||reduce3,bake3,raw2,poach2|
+plemon|Preserved lemon|🍋|F|0341000|soft|y|||raw3,puree3|
+horser|Horseradish|🤍|H|0001030|firm|w|||raw3,whip2|
+pginger|Pickled ginger|🫚|H|1120010|soft|n|||raw3|
+prosc|Prosciutto|🥓|P|0400403|silky|r|||raw3,fry3,roast2,bake2,sear2,braise1,cure0,poach0|
+chorizo|Chorizo|🌭|P|0301424|firm|r|||fry3,sear3,braise3,raw2,roast2,grill2|
+sausage|Italian sausage|🌭|P|0200403|soft|n|||sear3,grill3,braise3,roast3,raw0|
+gbeef|Ground beef|🥩|P|0100403|soft|r|||sear3,braise3,grill3,raw1|
+cbreast|Chicken breast|🍗|P|0100301|tender|w|||poach3,sear3,grill3,fry3,raw0|
+ctuna|Canned tuna|🥫|S|0200401|soft|n|||raw3,puree2,fry2,bake2,sear0,grill0,poach0,cure0,boil0|
+ssalmon|Smoked salmon|🐟|S|0300403|silky|o|||raw3,puree2,whip2,fry1,sear0,grill0,poach0,boil0,cure0|
+dashi|Dashi|🍲|X|0200500|liquid|y||||
+vstock|Vegetable stock|🍲|X|0100200|liquid|y||||
+duckfat|Duck fat|🫗|X|0000105|liquid|y||||
+cocooil|Coconut oil|🫗|X|1000005|liquid|w||||
+noil|Neutral oil|🫗|X|0000005|liquid|y||||
+truffle|Truffle oil|🫗|X|0001205|liquid|y|||raw3|
+chilicrisp|Chili crisp|🌶️|X|0201243|paste|r|||raw3|
+sriracha|Sriracha|🔥|X|1210040|liquid|r|||raw3,reduce2|
+harissa|Harissa|🌶️|X|0111232|paste|r|||braise3,raw2,reduce2,fry2|
+chipotle|Chipotle in adobo|🌶️|X|1201231|paste|r|||braise3,reduce3,raw2|
+pesto|Pesto|🌿|X|0201204|paste|g|||raw3|
+hoisin|Hoisin sauce|🥢|X|4301200|paste|k|||reduce3,raw2,braise2|
+oystersc|Oyster sauce|🥢|X|2401500|liquid|k|||reduce2,braise2,raw2|
+mirin|Mirin|🍶|X|4010100|liquid|y|||reduce3,braise2,poach2,raw0|
+bbq|Barbecue sauce|🍖|X|3221211|paste|k|||reduce3,braise3,raw2|
+molasses|Molasses|🍯|X|4003000|liquid|k|||bake3,reduce2,braise2,caramel2|
+csyrup|Corn syrup|🍯|X|5000000|liquid|w|||caramel3,reduce2|
+acv|Apple cider vinegar|🧴|X|1050000|liquid|y||||
+sherryv|Sherry vinegar|🧴|X|0050100|liquid|b|||reduce2|
+oj|Orange juice|🧃|X|3020000|liquid|o|||reduce3,churn2,poach2|
+cider|Apple cider|🧃|X|3020000|liquid|y|||reduce3,braise3,poach3|
+pommol|Pomegranate molasses|🍎|X|2051000|liquid|r|||raw3,reduce2|
+sherry|Dry sherry|🥃|X|1011100|liquid|b|||reduce3,braise2,raw0|
+brandy|Brandy|🥃|X|1002000|liquid|b|||reduce3,caramel2,raw0|
+lager|Lager|🍺|X|0002000|liquid|y|||fry3,braise2,raw0|
+espowder|Espresso powder|☕|X|0004000|powder|k|||bake3,churn3,whip2,raw1|
+rosew|Rose water|🌹|X|1000000|liquid|n|||churn3,raw2,whip2,poach2|
+evap|Evaporated milk|🥛|D|2000003|liquid|w|||churn2,bake2,reduce2|
+condensed|Condensed milk|🥛|D|5000003|liquid|w|||caramel3,churn3,reduce3,bake2,raw2|
+cfraiche|Crème fraîche|🥛|D|0020004|creamy|w|||raw3,whip2|
+mozz|Mozzarella|🧀|D|0100102|soft|w|||raw3,bake3,fry2,grill1|
+gruyere|Gruyère|🧀|D|0201303|firm|y|||bake3,raw2,fry2,reduce2,soup2|
+yolks|Egg yolks|🥚|D|0000305|creamy|y|||cure3,whip3,churn3,poach2,raw2,bake2|
+whites|Egg whites|🥚|D|0000100|liquid|w|||whip3,bake3,poach2,fry1,churn1,raw0|
+couscous|Couscous|🌾|C|0000000|soft|y|||boil3,toast2|
+arborio|Arborio rice|🍚|C|0000001|creamy|w|||boil3,fry2,bake1,toast1|
+enoodle|Egg noodles|🍜|C|0000100|soft|y|||boil3,fry3,soup3|
+tchips|Tortilla chips|🫓|C|0200001|crunchy|y|||raw3,toast3,bake2,boil0|
+saltine|Saltine crackers|🍘|C|0200000|crunchy|w|||toast3,raw2,bake2,boil0|
+graham|Graham crackers|🍪|C|3000001|crunchy|b|||toast3,bake3,raw2,boil0|
+puff|Puff pastry|🥐|C|0100004|crisp|y|||bake3,fry2,toast1,raw0,boil0|
+cflakes|Cornflakes|🥣|C|1100000|crunchy|y|||toast3,fry3,raw2,bake2,boil0|
+bbeans|Black beans|🫘|C|0000201|soft|k|||puree3,braise3,boil2,fry2,soup3|
+farro|Farro|🌾|C|0001100|chewy|b|||boil3,toast2,braise2|
+ladyf|Ladyfingers|🍪|C|3000000|crunchy|y|||raw2,toast2,bake2|
+aflour|Almond flour|🌰|N|1000103|powder|w|||bake3,toast2,fry2|
+cocoflake|Coconut flakes|🥥|N|2000003|crunchy|w|||toast3,bake3,raw2|
+poppy|Poppy seeds|⚫|N|0001102|crunchy|k|||bake3,toast3,raw2|
+pepita|Pumpkin seeds|🎃|N|0001103|crunchy|g|||toast3,caramel3,raw2,puree2|
+pinenut|Pine nuts|🌰|N|1000104|crunchy|w|||toast3,puree3,raw2|
+pecan|Pecans|🌰|N|1001104|crunchy|b|||toast3,caramel3,bake3,raw2|
+hazelnut|Hazelnuts|🌰|N|1001104|crunchy|b|||toast3,puree3,caramel3,bake3|
+sage|Sage|🌿|H|0002000|soft|g|||fry3,braise2,raw0|
+tarragon|Tarragon|🌿|H|1001000|soft|g|||raw3,reduce2,puree2|
+chives|Chives|🌱|H|0001000|soft|g|||raw3|
+dillh|Dill|🌿|H|0001000|soft|g|||raw3,pickle3,cure2|
+oregano|Dried oregano|🌿|H|0002000|powder|g|||braise2,roast2,toast1|
+cflake|Chili flakes|🌶️|H|0000040|powder|r|||toast2,fry2,raw2|
+currypow|Curry powder|🟡|H|0002120|powder|y|||toast3,braise3,fry2|
+turmeric|Turmeric|🟡|H|0002000|powder|y|||toast2,braise2,pickle2|
+cardamom|Cardamom|🟢|H|0001010|powder|g|||bake3,churn3,toast3,poach2|
+cinnamon|Cinnamon|🟤|H|1001010|powder|b|||bake3,toast3,churn2,poach2,caramel2|
+saffron|Saffron|🌼|H|0002100|powder|o|||poach3,braise2,churn2|
+fenseed|Fennel seed|🌿|H|1001000|powder|b|||toast3,cure2,braise2|
+sichuan|Sichuan pepper|⚫|H|0011030|powder|r|||toast3,fry2|
+sumac|Sumac|🔴|H|0031000|powder|r|||raw3|
+zaatar|Za’atar|🌿|H|0112100|powder|g|||raw3,toast2|
+lavender|Lavender|🌸|H|0002000|powder|p|||churn3,bake2,poach2,reduce2,raw0|
+mushpow|Mushroom powder|🍄|H|0100500|powder|b|||raw3,toast2|
+psugar|Powdered sugar|🥄|W|5000000|powder|w|||raw3,whip3,bake2|
+mchoc|Milk chocolate|🍫|W|4001003|snappy|b|||reduce3,whip3,churn3,bake3,raw2,caramel0,toast0,fry0|
+sprinkles|Sprinkles|🎉|W|5000000|crunchy|n|||raw3,bake2|
+jam|Strawberry jam|🍓|W|5010000|soft|r|||reduce3,bake3,raw2,churn2|
+marmalade|Marmalade|🍊|W|4012000|soft|o|||reduce3,raw2,bake2|
+dulce|Dulce de leche|🍮|W|5000003|creamy|b|||raw3,churn3,whip2,bake2,reduce2|
+lcurd|Lemon curd|🍋|W|3030003|creamy|y|||raw3,whip3,churn3,bake2|
 `.trim().split('\n');
 const I={},BASKET_POOL=[],PANTRY=[];
 function parseIng(line,pantry){const [id,name,em,cat,f,tex,col,courses,odd,ov,hint]=line.split('|');const o={};(ov||'').split(',').filter(Boolean).forEach(s=>o[s.slice(0,-1)]=+s.slice(-1));
@@ -2576,7 +2684,7 @@ const VENUES=['Back-Alley Pop-Up','Farmers’ Market','Harbour Shack','Night Mar
 const BANNABLE=['fry','churn','grill','braise','bake','smoke','puree','pickle'];
 const PERKS={knives:{name:'Sharp knives',text:'Every component takes one minute less of hands-on time.',wins:0},cool:{name:'Cool head',text:'Re-firing a failed component costs half the time.',wins:3},palate:{name:'Iron palate',text:'You can read how well every technique suits every ingredient.',wins:8},show:{name:'Showman',text:'Composed plating costs no time.',wins:15}};
 const AI=[{id:'vex',name:'Dario Vex',tag:'Gambler. Rushes ambitious techniques.',style:'gamble'},{id:'sato',name:'Mei-Lin Sato',tag:'Technician. Careful and rarely burns a thing.',style:'tech'},{id:'costa',name:'Bruna Costa',tag:'Comfort cook. Simple, hearty, well seasoned.',style:'comfort'},{id:'oke',name:'Tunde Oke',tag:'Avant-garde. Transforms everything he touches.',style:'avant'},{id:'hal',name:'Greta Hal',tag:'Forager. Raw, pickled and acidic.',style:'fresh'}];
-const MAXI=6;
+const MAXI=40;
 const CRISP=['crisp','snappy','brittle','crunchy'];
 const JUDGES=[
  {id:'od',name:'Odile Marchetti',tag:'The classicist',bio:'Rewards the right technique for each ingredient. Dislikes crowded plates.',
@@ -2889,10 +2997,10 @@ function vPlan(){const st=planStats(),C=COURSES[M.round],b=basket(),usedIds=new 
  ${P.comps.map((c,i)=>{const t=c.tech&&T[c.tech],tm=compTime(c,M.perk);return `<section class="panel comp">
   <div class="row" style="justify-content:space-between"><div class="seg">${Object.entries(ROLES).map(([k,r])=>`<button data-a="role" data-i="${i}" data-v="${k}" aria-pressed="${c.role===k}">${r.name}</button>`).join('')}</div>${P.comps.length>1?`<button class="btn ghost" style="min-height:38px;padding:6px 12px" data-a="delc" data-i="${i}" aria-label="Remove component">Remove</button>`:''}</div>
   <div class="row">${c.ings.map((id,k)=>`<button class="chip ${k?'':'lead'} ${ing(id).pantry?'':'b'}" data-a="chip" data-i="${i}" data-k="${k}" title="${k?'Tap to make this the lead':'Lead ingredient. Tap to remove'}">${ing(id).em} ${ing(id).name}${k?'':' <span class="x">lead</span>'}</button>`).join('')}
-   ${c.ings.length<MAXI?`<button class="chip" data-a="pick" data-i="${i}">+ ingredient</button>`:''}</div>
+   <button class="chip" data-a="pick" data-i="${i}">+ ingredient</button></div>
   <div class="row"><button class="btn" data-a="tech" data-i="${i}" ${c.ings.length?'':'disabled'}>${t?t.name:'Choose a technique'}</button>
    <div class="seg">${['Rush','Steady','Careful'].map((n,k)=>`<button data-a="pace" data-i="${i}" data-v="${k}" aria-pressed="${c.pace===k}">${n}</button>`).join('')}</div></div>
-  ${t?`<div class="stat"><span>${tm.a} min hands-on${tm.p?' + '+tm.p+' unattended':''}</span>${fitTag(c.ings[0],c.tech)}${riskTag(c)}<span>${['','simple cooking','transforms it'][t.lvl]||'untouched'}</span></div>`:`<p class="small mute">${c.ings.length?'The lead ingredient decides whether the technique works.':'Add up to six ingredients. The first one leads. Each extra one costs a minute.'}</p>`}
+  ${t?`<div class="stat"><span>${tm.a} min hands-on${tm.p?' + '+tm.p+' unattended':''}</span>${fitTag(c.ings[0],c.tech)}${riskTag(c)}<span>${['','simple cooking','transforms it'][t.lvl]||'untouched'}</span></div>`:`<p class="small mute">${c.ings.length?'The lead ingredient decides whether the technique works.':'Add as many ingredients as you like. The first one leads. Each extra one costs a hands-on minute.'}</p>`}
  </section>`}).join('')}
  ${P.comps.length<4?'<button class="btn wide" data-a="addc">+ Add a component</button>':''}
  <section class="panel"><h3>Finish and plate</h3><div class="row">${Object.entries(FIN).map(([k,f])=>`<button class="chip" data-a="fin" data-id="${k}" aria-pressed="${P.fin.includes(k)}">${f.name}</button>`).join('')}</div><p class="small mute">Up to three finishing touches. They cost no time.</p>
@@ -2929,7 +3037,7 @@ function vSheet(){const s=sheet;let h='';
   <div class="col">${TECH.map(t=>{const ban=K().ban.includes(t.id);return `<button class="trow ${ban?'lock':''}" data-a="settech" data-i="${s.i}" data-id="${t.id}" aria-pressed="${c.tech===t.id}" ${ban?'disabled':''}><b>${t.name}</b><span class="mono small">${t.a}${t.p?' + '+t.p:''} min</span><span class="small mute">${ban?'Station down for this level':['Leaves it as it is','Simple cooking','Transforms the ingredient'][t.lvl]}</span>${ban?'<span></span>':fitTag(lead,t.id)}</button>`}).join('')}</div>`}
  return `<div class="scrim" data-a="scrim"><div class="sheet" role="dialog" aria-modal="true">${h}</div></div>`}
 const PGROUPS=[['Produce','VF'],['Meat','PS'],['Dairy and eggs','D'],['Dry goods','C'],['Sauces and liquids','X'],['Herbs and spices','H'],['Sweet things and nuts','WN']];
-const pickCount=c=>c.ings.length?c.ings.length+' of '+MAXI+' chosen: '+c.ings.map(id=>ing(id).name).join(', ')+'. The first one leads.':'Choose up to '+MAXI+'. The first one you tap leads. Search by name, type or taste.';
+const pickCount=c=>c.ings.length?c.ings.length+' chosen: '+c.ings.map(id=>ing(id).name).join(', ')+'. The first one leads. Each one after it adds a minute.':'Choose as many as you like. The first one you tap leads. Search by name, type or taste.';
 function filterPick(q){q=q.trim().toLowerCase();let any=false;document.querySelectorAll('#sheet .pg').forEach(g=>{let n=0;g.querySelectorAll('.tile').forEach(t=>{const ok=!q||q.split(/\s+/).every(w=>t.dataset.k.includes(w));t.hidden=!ok;if(ok)n++});g.hidden=!n;if(n)any=true});const m=$('#nomatch');if(m)m.hidden=any}
 const OUT=[['Ruined','bad'],['Flawed','warm'],['Good','cool'],['Perfect','good']];
 function vService(){const done=SV.i>=P.comps.length;return `<div class="rail"><div class="clock">${SV.left}<span style="font-size:14px">m</span></div><div class="meta"><span class="small"><b>Service</b> · minutes in hand</span><span class="small mute mono">${done?'Everything is off the heat.':'Cooking…'}</span></div></div>
@@ -3018,7 +3126,7 @@ const ACT={
  addc:()=>{const used=P.comps.map(c=>c.role),role=['main','side','sauce','garnish'].find(r=>!used.includes(r))||'side';P.comps.push({role,ings:[],tech:null,pace:1,out:2});render()},
  delc:d=>{P.comps.splice(+d.i,1);render()},role:d=>{P.comps[+d.i].role=d.v;render()},pace:d=>{P.comps[+d.i].pace=+d.v;render()},
  pick:d=>{sheet={t:'pick',i:+d.i};render()},tech:d=>{sheet={t:'tech',i:+d.i};render()},
- add:(d,e)=>{const c=P.comps[sheet.i],k=c.ings.indexOf(d.id);if(k>=0)c.ings.splice(k,1);else if(c.ings.length<MAXI)c.ings.push(d.id);else{const pc=$('#pickcount');if(pc){pc.textContent='That is the limit of '+MAXI+'. Tap a chosen ingredient to take it out.';pc.className='small bad'}return}if(!c.ings.length)c.tech=null;
+ add:(d,e)=>{const c=P.comps[sheet.i],k=c.ings.indexOf(d.id);if(k>=0)c.ings.splice(k,1);else if(c.ings.length<MAXI)c.ings.push(d.id);else return;if(!c.ings.length)c.tech=null;
   document.querySelectorAll('#sheet .tile').forEach(t=>t.classList.toggle('sel',c.ings.includes(t.dataset.id)));const pc=$('#pickcount');if(pc){pc.textContent=pickCount(c);pc.className='small mute'}},
  chip:d=>{const c=P.comps[+d.i],k=+d.k;if(k===0){c.ings.shift();if(!c.ings.length)c.tech=null}else{const[x]=c.ings.splice(k,1);c.ings.unshift(x)}render()},
  settech:d=>{if(K().ban.includes(d.id))return;P.comps[+d.i].tech=d.id;sheet=null;render()},
