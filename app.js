@@ -2684,7 +2684,7 @@ const VENUES=['Back-Alley Pop-Up','Farmers’ Market','Harbour Shack','Night Mar
 const BANNABLE=['fry','churn','grill','braise','bake','smoke','puree','pickle'];
 const PERKS={knives:{name:'Sharp knives',text:'Every component takes one minute less of hands-on time.',wins:0},cool:{name:'Cool head',text:'Re-firing a failed component costs half the time.',wins:3},palate:{name:'Iron palate',text:'You can read how well every technique suits every ingredient.',wins:8},show:{name:'Showman',text:'Composed plating costs no time.',wins:15}};
 const AI=[{id:'vex',name:'Dario Vex',tag:'Gambler. Rushes ambitious techniques.',style:'gamble'},{id:'sato',name:'Mei-Lin Sato',tag:'Technician. Careful and rarely burns a thing.',style:'tech'},{id:'costa',name:'Bruna Costa',tag:'Comfort cook. Simple, hearty, well seasoned.',style:'comfort'},{id:'oke',name:'Tunde Oke',tag:'Avant-garde. Transforms everything he touches.',style:'avant'},{id:'hal',name:'Greta Hal',tag:'Forager. Raw, pickled and acidic.',style:'fresh'}];
-const MAXI=40;
+const MAXI=400,EXTRA=n=>Math.min(3,n-1);   // MAXI only guards data from another device; extras beyond three cost nothing more
 const CRISP=['crisp','snappy','brittle','crunchy'];
 const JUDGES=[
  {id:'od',name:'Odile Marchetti',tag:'The classicist',bio:'Rewards the right technique for each ingredient. Dislikes crowded plates.',
@@ -2726,10 +2726,10 @@ function makeCfg(lvl,diff){const D=DIFFS[diff],duel=lvl<0,L=duel?12:lvl,v=Math.f
   return K}
 function budgetFor(ci,K){return Math.max(12,COURSES[ci].min+K.clock)}
 function plateMin(d,perk){return perk==='show'&&d.plate===1?0:PLATE[d.plate].min}
-function compTime(c,perk){const t=T[c.tech];if(!t||!c.ings.length)return{a:0,p:0};const pm=[.7,1,1.35][c.pace];return{a:Math.max(1,Math.round((t.a+c.ings.length-1)*pm)-(perk==='knives'?1:0)),p:Math.round(t.p*pm)}}
+function compTime(c,perk){const t=T[c.tech];if(!t||!c.ings.length)return{a:0,p:0};const pm=[.7,1,1.35][c.pace];return{a:Math.max(1,Math.round((t.a+EXTRA(c.ings.length))*pm)-(perk==='knives'?1:0)),p:Math.round(t.p*pm)}}
 function dishTime(d,perk){let a=plateMin(d,perk),long=0;for(const c of d.comps){const x=compTime(c,perk);a+=x.a;long=Math.max(long,x.a+x.p)}return{a,long:long+plateMin(d,perk)}}
 function feasible(d,budget,perk){const x=dishTime(d,perk);return x.a<=budget&&x.long<=budget}
-function pFail(c,mul){const t=T[c.tech],a=aff(I[c.ings[0]],t);let p=t.risk+(2-a)*.14+[.15,0,-.07][c.pace]+(c.ings.length-1)*.02;p=clamp(p*(mul||1),.02,.95);return a===0?Math.max(p,.85):p}
+function pFail(c,mul){const t=T[c.tech],a=aff(I[c.ings[0]],t);let p=t.risk+(2-a)*.14+[.15,0,-.07][c.pace]+EXTRA(c.ings.length)*.02;p=clamp(p*(mul||1),.02,.95);return a===0?Math.max(p,.85):p}
 function rollOut(c,r,mul){const p=pFail(c,mul),x=r();if(x<p*.3)return 0;if(x<p)return 1;const a=aff(I[c.ings[0]],T[c.tech]);return r()<.15+a*.07+(c.pace===2?.12:c.pace===0?-.1:0)?3:2}
 function compVec(c){const t=T[c.tech];let v=[0,0,0,0,0,0,0],w=0;c.ings.forEach((id,i)=>{const k=i?1:2;w+=k;I[id].f.forEach((x,j)=>v[j]+=x*k)});
   v=v.map((x,j)=>(x/w+t.d[j])*(t.id==='reduce'?1.25:1));
@@ -3000,7 +3000,7 @@ function vPlan(){const st=planStats(),C=COURSES[M.round],b=basket(),usedIds=new 
    <button class="chip" data-a="pick" data-i="${i}">+ ingredient</button></div>
   <div class="row"><button class="btn" data-a="tech" data-i="${i}" ${c.ings.length?'':'disabled'}>${t?t.name:'Choose a technique'}</button>
    <div class="seg">${['Rush','Steady','Careful'].map((n,k)=>`<button data-a="pace" data-i="${i}" data-v="${k}" aria-pressed="${c.pace===k}">${n}</button>`).join('')}</div></div>
-  ${t?`<div class="stat"><span>${tm.a} min hands-on${tm.p?' + '+tm.p+' unattended':''}</span>${fitTag(c.ings[0],c.tech)}${riskTag(c)}<span>${['','simple cooking','transforms it'][t.lvl]||'untouched'}</span></div>`:`<p class="small mute">${c.ings.length?'The lead ingredient decides whether the technique works.':'Add as many ingredients as you like. The first one leads. Each extra one costs a hands-on minute.'}</p>`}
+  ${t?`<div class="stat"><span>${tm.a} min hands-on${tm.p?' + '+tm.p+' unattended':''}</span>${fitTag(c.ings[0],c.tech)}${riskTag(c)}<span>${['','simple cooking','transforms it'][t.lvl]||'untouched'}</span></div>`:`<p class="small mute">${c.ings.length?'The lead ingredient decides whether the technique works.':'Add as many ingredients as you like. There is no limit. The first one leads.'}</p>`}
  </section>`}).join('')}
  ${P.comps.length<4?'<button class="btn wide" data-a="addc">+ Add a component</button>':''}
  <section class="panel"><h3>Finish and plate</h3><div class="row">${Object.entries(FIN).map(([k,f])=>`<button class="chip" data-a="fin" data-id="${k}" aria-pressed="${P.fin.includes(k)}">${f.name}</button>`).join('')}</div><p class="small mute">Up to three finishing touches. They cost no time.</p>
@@ -3037,7 +3037,7 @@ function vSheet(){const s=sheet;let h='';
   <div class="col">${TECH.map(t=>{const ban=K().ban.includes(t.id);return `<button class="trow ${ban?'lock':''}" data-a="settech" data-i="${s.i}" data-id="${t.id}" aria-pressed="${c.tech===t.id}" ${ban?'disabled':''}><b>${t.name}</b><span class="mono small">${t.a}${t.p?' + '+t.p:''} min</span><span class="small mute">${ban?'Station down for this level':['Leaves it as it is','Simple cooking','Transforms the ingredient'][t.lvl]}</span>${ban?'<span></span>':fitTag(lead,t.id)}</button>`}).join('')}</div>`}
  return `<div class="scrim" data-a="scrim"><div class="sheet" role="dialog" aria-modal="true">${h}</div></div>`}
 const PGROUPS=[['Produce','VF'],['Meat','PS'],['Dairy and eggs','D'],['Dry goods','C'],['Sauces and liquids','X'],['Herbs and spices','H'],['Sweet things and nuts','WN']];
-const pickCount=c=>c.ings.length?c.ings.length+' chosen: '+c.ings.map(id=>ing(id).name).join(', ')+'. The first one leads. Each one after it adds a minute.':'Choose as many as you like. The first one you tap leads. Search by name, type or taste.';
+const pickCount=c=>c.ings.length?c.ings.length+' chosen: '+c.ings.map(id=>ing(id).name).join(', ')+'. No limit. The first one leads.':'Choose as many as you like. There is no limit. The first one you tap leads. Search by name, type or taste.';
 function filterPick(q){q=q.trim().toLowerCase();let any=false;document.querySelectorAll('#sheet .pg').forEach(g=>{let n=0;g.querySelectorAll('.tile').forEach(t=>{const ok=!q||q.split(/\s+/).every(w=>t.dataset.k.includes(w));t.hidden=!ok;if(ok)n++});g.hidden=!n;if(n)any=true});const m=$('#nomatch');if(m)m.hidden=any}
 const OUT=[['Ruined','bad'],['Flawed','warm'],['Good','cool'],['Perfect','good']];
 function vService(){const done=SV.i>=P.comps.length;return `<div class="rail"><div class="clock">${SV.left}<span style="font-size:14px">m</span></div><div class="meta"><span class="small"><b>Service</b> · minutes in hand</span><span class="small mute mono">${done?'Everything is off the heat.':'Cooking…'}</span></div></div>
@@ -3126,7 +3126,7 @@ const ACT={
  addc:()=>{const used=P.comps.map(c=>c.role),role=['main','side','sauce','garnish'].find(r=>!used.includes(r))||'side';P.comps.push({role,ings:[],tech:null,pace:1,out:2});render()},
  delc:d=>{P.comps.splice(+d.i,1);render()},role:d=>{P.comps[+d.i].role=d.v;render()},pace:d=>{P.comps[+d.i].pace=+d.v;render()},
  pick:d=>{sheet={t:'pick',i:+d.i};render()},tech:d=>{sheet={t:'tech',i:+d.i};render()},
- add:(d,e)=>{const c=P.comps[sheet.i],k=c.ings.indexOf(d.id);if(k>=0)c.ings.splice(k,1);else if(c.ings.length<MAXI)c.ings.push(d.id);else return;if(!c.ings.length)c.tech=null;
+ add:(d,e)=>{const c=P.comps[sheet.i],k=c.ings.indexOf(d.id);if(k>=0)c.ings.splice(k,1);else c.ings.push(d.id);if(!c.ings.length)c.tech=null;
   document.querySelectorAll('#sheet .tile').forEach(t=>t.classList.toggle('sel',c.ings.includes(t.dataset.id)));const pc=$('#pickcount');if(pc){pc.textContent=pickCount(c);pc.className='small mute'}},
  chip:d=>{const c=P.comps[+d.i],k=+d.k;if(k===0){c.ings.shift();if(!c.ings.length)c.tech=null}else{const[x]=c.ings.splice(k,1);c.ings.unshift(x)}render()},
  settech:d=>{if(K().ban.includes(d.id))return;P.comps[+d.i].tech=d.id;sheet=null;render()},

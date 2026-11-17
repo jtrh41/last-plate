@@ -1,5 +1,5 @@
 // Last Plate offline helper. VERSION changes with every build so updates arrive on their own.
-const VERSION = 'lp-036d1aeb3900';
+const VERSION = 'lp-b8f928d92da3';
 const CORE = ['./', 'index.html', 'app.js', 'manifest.webmanifest', 'icon-180.png', 'icon-512.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(VERSION).then(c => c.addAll(CORE)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => {
