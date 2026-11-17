@@ -2403,6 +2403,83 @@ pb|Peanut butter|🥜|N|1100205|creamy|b|aed|1|puree3,churn3,whip3,bake3,reduce2
 sake|Sake|🍶|X|1010200|liquid|w|ae|0|poach3,braise3,cure3,reduce2,pickle2,churn1,raw0|Clean and savoury. Made for seafood.
 champ|Champagne|🍾|X|1020000|liquid|y|ad|1|poach3,churn3,reduce2,whip2,pickle2,raw1,braise1|Bright acid. Poach in it or freeze it.
 curry|Red curry paste|🍛|X|0201342|paste|o|ae|0|braise3,reduce3,fry2,raw1,churn0|Heat and aroma. Fry it out first.
+quail|Quail|🐦|P|0100302|tender|n|ae|0|grill3,fry3|A tiny bird. It overcooks in a blink.
+rabbit|Rabbit legs|🐇|P|0100302|tender|w|e|0|braise3,sear2,grill1|As lean as chicken breast. Braise it.
+bison|Ground bison|🦬|P|0100402|soft|r|ae|0|raw1,braise2,cure0|Lean mince for burgers, meatballs or ragù.
+belly|Pork belly|🐷|P|0100405|tender|n|ae|0|braise3,roast3,smoke3,sear2,fry2,grill2,cure2|Fat that needs time to render.
+turkey|Turkey breast|🦃|P|0100301|tender|w|ae|0|poach3,smoke3,cure0|Dry the moment you look away.
+venison|Venison loin|🦌|P|0100402|tender|r|e|0|sear3,raw2,cure2,braise1|Lean and gamey. Serve it rare.
+spam|Canned ham|🥫|P|1400303|soft|n|ae|1|fry3,sear3,grill2,roast2,puree1,braise1|Salty and soft. A hard sear is its friend.
+jerky|Beef jerky|🥩|P|1401400|chewy|b|ae|1|braise3,raw2,toast2,fry2,puree1,sear0,grill0,roast0|Dried and salty. Rehydrate it or shave it.
+frog|Frog legs|🐸|P|0100201|tender|w|ae|1|fry3,sear3,grill2,poach2|Tastes of chicken, cooks like fish.
+snail|Snails|🐌|S|0100201|chewy|b|a|1|sear3,roast3,braise2,fry2,poach2,raw0,cure0|Garlic butter exists for a reason.
+scallop|Sea scallops|🐚|S|1100301|silky|w|ae|0|sear3,raw3,cure3,braise0,boil0|Sweet. A hard sear, one side only.
+tuna|Tuna loin|🍣|S|0100402|silky|r|ae|0|raw3,sear3,cure3,braise0,boil0,poach1|Best raw or barely seared.
+mussel|Mussels|🦪|S|0200301|soft|k|ae|0|poach3,boil3,braise2,smoke2,grill2,sear1,raw0,cure0|Steam them open in something aromatic.
+anchovy|Anchovies|🐟|S|0500500|soft|b|ae|1|raw3,puree3,fry2,sear1,poach0,boil0,cure0|Salt bombs that melt into sauces.
+roe|Trout roe|🟠|S|0400302|juicy|o|a|1|raw3,cure1,smoke1,sear0,grill0,roast0,fry0,braise0,poach0,boil0|Pops of brine. Heat destroys it.
+eel|Smoked eel|🐍|S|1200404|silky|b|ae|1|raw3,grill3,sear2,puree2,smoke1,cure0,boil0|Rich, sweet and already smoked.
+kingmush|King oyster mushrooms|🍄|V|0000301|chewy|w|ae|0|sear3,grill3,roast3,raw0|Meaty. Score and sear them like scallops.
+aspar|Asparagus|🎋|V|1001100|crisp|g|ae|0|grill3,raw2,poach2|Snap, char, done.
+leek|Leeks|🌱|V|2000100|soft|g|ae|0|braise3,grill3,fry3,raw0|Sweet when melted, bitter when burnt.
+radish|Radishes|🔴|V|0001010|crunchy|r|ae|0|raw3,pickle3,roast2,braise1|Peppery crunch.
+beet|Beets|🟣|V|3001000|firm|p|aed|0|roast3,pickle3,puree3,bake3,raw2,churn2|Earthy and sweet. It stains everything.
+cauli|Cauliflower|🥦|V|0000100|crunchy|w|ae|0|roast3,puree3,fry3,pickle3,raw1|Roasts like a steak, blends like cream.
+fennel|Fennel|🌿|V|1001000|crunchy|w|ae|0|raw3,braise3,roast3,pickle3|Anise crunch raw, sweet when braised.
+arti|Artichokes|🌵|V|0002100|firm|g|ae|0|fry3,braise3,grill3,puree2,raw0|All preparation. Worth it fried.
+zucch|Zucchini|🥒|V|0000000|soft|g|ae|0|grill3,fry3,bake3,raw2,boil0|Watery. Char it fast or shave it raw.
+okra|Okra|🟢|V|0001000|soft|g|ae|1|fry3,grill3,pickle3,braise2,boil0,raw0|Slimy when cooked wet. Fry or char it.
+sprout|Brussels sprouts|🥬|V|0002000|crunchy|g|ae|0|roast3,fry3,raw2,boil0|Bitter until browned.
+jalap|Jalapeños|🌶️|V|0000040|crisp|g|ae|0|pickle3,raw3,fry3,grill3,roast3|Fresh green heat.
+nori|Nori sheets|🍙|V|0200400|crisp|k|ae|1|toast3,fry3,raw2,puree2,braise1,grill1|Brittle and savoury. Toast and crumble.
+plantain|Plantains|🍌|C|2000000|firm|y|aed|0|fry3,roast3,caramel3,puree2,boil2,bake2,raw0|A starchy banana. Fry it twice.
+fig|Fresh figs|🟤|F|4000000|soft|p|aed|0|roast3,grill3,raw3,caramel3|Honeyed. They love salt and cheese.
+pom|Pomegranate|🍎|F|2030000|juicy|r|aed|0|raw3,reduce3,puree1,roast0,grill0,sear0,bake0|Jewels of acid. Scatter them or reduce the juice.
+lychee|Lychees|⚪|F|4010000|juicy|w|ad|0|raw3,poach3,churn3,grill1|Floral and very sweet.
+plum|Plums|🍑|F|2030000|juicy|p|aed|0|roast3,poach3,pickle3|Tart skin, sweet flesh.
+rhubarb|Rhubarb|🌺|F|0040000|crisp|r|aed|0|poach3,roast3,pickle3,reduce3,bake3,raw1|Pure sourness. It needs sugar.
+cant|Cantaloupe|🍈|F|3000000|soft|o|aed|0|raw3,churn3,grill2,pickle2,roast0,bake0|Perfumed. Salt and cured meat flatter it.
+gfruit|Grapefruit|🍊|F|1032000|juicy|r|aed|0|raw3,reduce3,caramel3,grill2|Bitter and sour. Brûlée the cut face.
+date|Medjool dates|🌴|F|5000000|chewy|b|aed|0|raw3,puree3,bake3,roast2,fry2,reduce2|Caramel that grows on trees.
+cranb|Cranberries|🔴|F|1041000|firm|r|aed|0|reduce3,pickle3,bake3,roast2,raw1|Mouth-puckering until cooked with sugar.
+passion|Passion fruit|💛|F|2040000|juicy|y|ad|0|raw3,reduce3,churn3,whip3,bake2,grill0,roast0,sear0|Intense, perfumed acid.
+durian|Durian|🦔|F|3000103|creamy|y|d|1|churn3,puree3,raw2,whip2,fry2,bake2|Custard that smells like a dare.
+quinoa|Quinoa|🌾|C|0001000|soft|w|ae|0|boil3,toast3,fry2,bake2,puree1|Nutty. Toast it for crunch.
+cornmeal|Cornmeal|🟡|C|1000000|powder|y|aed|0|boil3,fry3,bake3,toast1,raw0|Polenta, cornbread or a crisp crust.
+gnocchi|Potato gnocchi|🥔|C|0100000|soft|w|ae|0|boil3,sear3,fry3,bake2,toast0|Boil, then brown in butter.
+rnoodle|Rice noodles|🍜|C|0000000|soft|w|ae|0|boil3,fry3,toast1,raw0|Soak them. Fry them for a nest.
+lentil|Black lentils|⚫|C|0001101|firm|k|ae|0|boil3,braise3,fry2,puree2|Earthy. They hold their shape.
+dough|Pizza dough|🍕|C|0100000|chewy|w|aed|1|bake3,fry3,grill3,boil1,toast1,raw0|Flatbread, fritters or dumplings.
+cereal|Sugary cereal|🥣|C|4000000|crunchy|y|d|1|toast3,churn3,raw2,bake2,puree2,boil0,fry0|Steep it in milk for cereal-milk ice cream.
+chips|Potato chips|🥔|C|0300002|crunchy|y|aed|1|toast3,raw2,bake2,caramel2,puree1,fry0,boil0|Salt and crunch. A crust or a crumble.
+tots|Tater tots|🟫|C|0200002|crisp|y|ae|1|fry3,bake3,roast3,puree2,boil0|Shredded potato, already par-fried.
+rye|Rye bread|🍞|C|0101100|chewy|b|ae|0|toast3,fry3,bake2,puree1|Caraway and sourness.
+ricotta|Ricotta|🧀|D|1100002|creamy|w|aed|0|raw3,whip3,bake3,fry2,churn2|Mild and milky. Sweet or savoury.
+masc|Mascarpone|🥛|D|1000005|creamy|w|d|0|raw3,whip3,churn3,bake2|Cream you can spoon.
+feta|Feta|🧀|D|0402002|firm|w|ae|0|raw3,whip3,bake3,grill2,fry2|Salty and sharp. It whips smooth.
+halloumi|Halloumi|🧀|D|0300002|chewy|w|ae|0|sear3,grill3,fry3,raw1,whip0,churn0|The cheese that grills.
+bmilk|Buttermilk|🥛|D|0020001|liquid|w|aed|0|churn3,bake3,raw2,cure2,whip1|Tangy. It brines chicken and lifts cake.
+string|String cheese|🧵|D|0300102|chewy|w|ae|1|fry3,bake3,grill1,raw1,whip0,churn0|Processed mozzarella. Bread it and fry it.
+marsh|Marshmallows|☁️|W|5000000|soft|w|d|1|toast3,grill3,churn2,reduce2,bake2,whip2,raw1,fry0|Torch them. Burnt sugar is the point.
+caramels|Soft caramels|🍬|W|5000002|chewy|b|d|1|reduce3,bake2,churn2,raw1,whip1,toast0,fry0|Melt them with cream for an instant sauce.
+jelly|Grape jelly|🍇|W|5010000|soft|p|aed|1|reduce3,raw2,churn2,bake2,whip1,fry0,toast0|A glaze for meatballs, or a filling.
+halva|Halva|🧱|W|4001004|brittle|y|d|1|raw3,churn3,whip2,bake2,toast1,reduce1|Sesame fudge. It crumbles beautifully.
+hazel|Chocolate hazelnut spread|🍫|N|4001004|creamy|k|d|1|whip3,churn3,bake3,raw2,reduce2,toast0,fry0,roast0,smoke0|Sweet and heavy. Lighten it.
+licorice|Black licorice|➰|W|4002000|chewy|k|d|1|reduce3,churn2,raw1,bake1,toast0,whip0,fry0|Anise and molasses. Melt it into syrup.
+floss|Cotton candy|🍭|W|5000000|airy|n|d|1|raw3,reduce2,caramel1,churn1,bake0,toast0,fry0,whip0|It vanishes when wet. Garnish at the last second.
+pie|Pumpkin pie|🥧|W|4000002|soft|o|d|1|churn3,puree2,fry2,toast2,whip2,raw1,bake1|Custard and crust. Take it apart.
+cocomilk|Coconut milk|🥥|X|1000004|liquid|w|aed|0|braise3,churn3,poach3,reduce2,whip2,raw1|Richness without dairy.
+tahini|Tahini|🥜|N|0002104|creamy|y|aed|0|raw3,puree3,churn2,bake2,whip2,reduce1,caramel1,toast0,roast0,smoke0|Bitter sesame cream. It needs lemon.
+fishsauce|Fish sauce|🐟|X|0500500|liquid|b|ae|1|braise3,caramel3,raw2,reduce2,cure2,churn0|Funk in a bottle. A few drops.
+gochu|Gochujang|🌶️|X|2301330|paste|r|ae|0|braise3,reduce3,raw2,fry2,caramel2,churn0|Sweet, fermented heat.
+earl|Earl Grey tea|🫖|X|0002000|liquid|b|ad|1|churn3,poach3,reduce2,whip2,bake2,cure2,raw1,braise1|Bergamot. Steep it into cream.
+rootbeer|Root beer|🥤|X|5001000|liquid|b|aed|1|reduce3,braise3,churn3,caramel2,poach1,raw0|Vanilla and sassafras.
+brine|Pickle brine|🫙|X|0340000|liquid|g|ae|1|cure3,pickle2,raw2,braise2,reduce1,churn1|A free marinade.
+wasabi|Wasabi|🟩|H|0001040|paste|g|ae|1|raw3,whip2,churn2,puree2,reduce0,braise0,fry0|Nose-clearing heat that dies when cooked.
+tequila|Tequila|🍹|X|0011000|liquid|w|aed|1|cure3,reduce2,churn2,pickle2,poach2,braise1,raw0|Lime and salt know what to do with it.
+pist|Pistachios|🥜|N|1100103|crunchy|g|aed|0|toast3,puree3,churn3,bake3,raw2|Green, sweet and expensive.
+cashew|Cashews|🥜|N|1000103|crunchy|w|aed|0|toast3,puree3,fry2,churn2,raw2|Blend them and they turn to cream.
+trail|Trail mix|🥜|N|3101002|crunchy|b|aed|1|toast3,bake3,caramel3,raw2,churn2,puree2|Nuts, raisins and chocolate. Granola in waiting.
 `.trim().split('\n');
 const RAW_PANTRY=`
 oil|Olive oil|🫗|X|0001005|liquid|y|||raw3|
@@ -2434,6 +2511,53 @@ greens|Salad greens|🥗|V|0001000|crisp|g|||raw3,roast0,grill0,braise0,fry0,boi
 yogurt|Yogurt|🍦|D|0020002|creamy|w||||
 vanilla|Vanilla|🌼|H|1000000|soft|w|||churn3,whip2,bake2,reduce2|
 spice|Warm spices|🍂|H|0001010|powder|b|||toast3,bake2,braise2|
+shallot|Shallots|🧅|V|1000100|crisp|p|||caramel3,pickle3,fry3,raw2|
+scallion|Scallions|🌱|H|0001000|crisp|g|||raw3,grill3,fry2,pickle2|
+celery|Celery|🥬|V|0101000|crunchy|g|||raw3,pickle3,braise2|
+cabbage|Cabbage|🥬|V|1001000|crunchy|w|||raw3,pickle3,braise3,grill3|
+cucumber|Cucumber|🥒|V|0000000|crisp|g|||raw3,pickle3,grill1,sear0,roast0,braise0,fry0,boil0|
+spinach|Spinach|🥬|V|0001100|soft|g|||puree3,raw2,boil2,braise2,fry1|
+fpeas|Frozen peas|🫛|V|2000000|soft|g|||puree3,boil3,raw1|
+limes|Limes|🍋|F|0050000|juicy|g|||raw3,reduce2,cure2,pickle2|
+oranges|Oranges|🍊|F|3020000|juicy|o|||raw3,reduce3|
+rasp|Raspberries|🍓|F|2030000|soft|r|||raw3,reduce3,churn3,puree3|
+raisin|Raisins|🍇|F|4010000|chewy|p|||bake3,raw2,poach2,puree2,reduce2|
+basil|Basil|🌿|H|0001000|soft|g|||raw3,puree3,fry2,churn2|
+cilantro|Cilantro|🌿|H|0001000|soft|g|||raw3,puree3|
+thyme|Thyme and rosemary|🌿|H|0002000|firm|g|||roast2,braise2,fry2,raw1|
+lgrass|Lemongrass|🎋|H|0011000|firm|g|||braise2,poach2,churn2,reduce2,raw0|
+bpepper|Black pepper|⚫|H|0001020|powder|k|||toast3|
+cumin|Cumin and coriander|🟤|H|0001110|powder|b|||toast3,braise2|
+paprika|Smoked paprika|🔴|H|1001110|powder|r|||toast2,braise2|
+sesame|Sesame seeds|⚪|N|0001102|crunchy|w|||toast3|
+sesoil|Sesame oil|🫗|X|0001104|liquid|b|||raw3|
+dijon|Dijon mustard|🟨|X|0221020|paste|y|||raw3,reduce2|
+mayo|Mayonnaise|🥚|X|0110004|creamy|w|||raw3,whip2|
+ketchup|Ketchup|🍅|X|3220200|paste|r|||reduce3,raw2,braise2|
+hotsauce|Hot sauce|🔥|X|0220040|liquid|r|||raw3,reduce2|
+worc|Worcestershire sauce|🥢|X|1321400|liquid|k||||
+tpaste|Tomato paste|🥫|X|1010400|paste|r|||braise3,reduce3,fry2|
+capers|Capers|🫒|V|0420000|firm|g|||raw3,fry3|
+balsamic|Balsamic vinegar|🧴|X|2031000|liquid|k|||reduce3,raw2|
+rvinegar|Red wine vinegar|🧴|X|0050000|liquid|r||||
+bstock|Beef stock|🍲|X|0200400|liquid|b||||
+rum|Dark rum|🥃|X|2001000|liquid|b|||reduce3,caramel3,churn2,raw0|
+parm|Parmesan|🧀|D|0301502|firm|y|||raw3,bake3,toast3,fry2,whip1|
+cheddar|Cheddar|🧀|D|0201303|firm|y|||bake3,raw2,fry2,reduce2|
+creamch|Cream cheese|🥛|D|0110004|creamy|w|||raw3,whip3,bake3,churn3|
+sourcream|Sour cream|🥛|D|0020003|creamy|w|||raw3|
+milk|Milk|🥛|D|1000002|liquid|w||||
+pasta|Dried pasta|🍝|C|0000000|soft|y|||boil3,bake2,fry1,toast1,raw0|
+panko|Panko crumbs|🍞|C|0000000|crunchy|w|||toast3,fry3|
+cstarch|Cornstarch|🌽|C|0000000|powder|w|||fry3,boil1,bake1,raw0|
+oats|Rolled oats|🌾|C|0000100|chewy|y|||toast3,bake3,boil3|
+wbeans|White beans|🫘|C|0000101|soft|w|||puree3,braise3,boil2,fry2|
+bsugar|Brown sugar|🥄|W|5001000|powder|b|||caramel3,reduce3,bake3|
+cocoa|Cocoa powder|🍫|W|0003001|powder|k|||bake3,churn3,whip2,raw2,reduce2|
+wchoc|White chocolate|🍫|W|5000004|snappy|w|||reduce3,whip3,churn3,caramel3,bake2,raw2|
+gelatin|Gelatin|🧊|X|0000000|powder|w|||whip3,reduce2,poach1,raw0|
+walnut|Walnuts|🌰|N|0001103|crunchy|b||||
+peanuts|Peanuts|🥜|N|0100103|crunchy|b||||
 `.trim().split('\n');
 const I={},BASKET_POOL=[],PANTRY=[];
 function parseIng(line,pantry){const [id,name,em,cat,f,tex,col,courses,odd,ov,hint]=line.split('|');const o={};(ov||'').split(',').filter(Boolean).forEach(s=>o[s.slice(0,-1)]=+s.slice(-1));
@@ -2452,6 +2576,7 @@ const VENUES=['Back-Alley Pop-Up','Farmers’ Market','Harbour Shack','Night Mar
 const BANNABLE=['fry','churn','grill','braise','bake','smoke','puree','pickle'];
 const PERKS={knives:{name:'Sharp knives',text:'Every component takes one minute less of hands-on time.',wins:0},cool:{name:'Cool head',text:'Re-firing a failed component costs half the time.',wins:3},palate:{name:'Iron palate',text:'You can read how well every technique suits every ingredient.',wins:8},show:{name:'Showman',text:'Composed plating costs no time.',wins:15}};
 const AI=[{id:'vex',name:'Dario Vex',tag:'Gambler. Rushes ambitious techniques.',style:'gamble'},{id:'sato',name:'Mei-Lin Sato',tag:'Technician. Careful and rarely burns a thing.',style:'tech'},{id:'costa',name:'Bruna Costa',tag:'Comfort cook. Simple, hearty, well seasoned.',style:'comfort'},{id:'oke',name:'Tunde Oke',tag:'Avant-garde. Transforms everything he touches.',style:'avant'},{id:'hal',name:'Greta Hal',tag:'Forager. Raw, pickled and acidic.',style:'fresh'}];
+const MAXI=6;
 const CRISP=['crisp','snappy','brittle','crunchy'];
 const JUDGES=[
  {id:'od',name:'Odile Marchetti',tag:'The classicist',bio:'Rewards the right technique for each ingredient. Dislikes crowded plates.',
@@ -2505,7 +2630,7 @@ function compVec(c){const t=T[c.tech];let v=[0,0,0,0,0,0,0],w=0;c.ings.forEach((
 function dishVec(d){let v=[0,0,0,0,0,0,0],w=0;for(const c of d.comps){const k=ROLES[c.role].w;w+=k;compVec(c).forEach((x,j)=>v[j]+=x*k)}
   v=v.map(x=>w?x/w:0);for(const f of d.fin)FIN[f].d.forEach((x,j)=>v[j]+=x);return v.map(x=>clamp(x,0,5))}
 const low=s=>s.charAt(0).toLowerCase()+s.slice(1);
-function phrase(c,basket){const names=c.ings.filter((id,i)=>i===0||basket.includes(id)).map(id=>low(I[id].name));return T[c.tech].ph.replace('%',names.join(' and '))}
+function phrase(c,basket){const names=c.ings.filter((id,i)=>i===0||basket.includes(id)).map(id=>low(I[id].name));return T[c.tech].ph.replace('%',names.length>2?names.slice(0,-1).join(', ')+' and '+names[names.length-1]:names.join(' and '))}
 function dishTitle(d,basket){if(!d.comps.length)return 'An empty plate';const p=d.comps.map(c=>phrase(c,basket));const rest=p.slice(1);let s=p[0];if(rest.length)s+=' with '+(rest.length>1?rest.slice(0,-1).join(', ')+' and ':'')+rest[rest.length-1];return s.charAt(0).toUpperCase()+s.slice(1)}
 // Scores one dish for a panel of three judges. Pure: the same dish and judges always give the same result.
 function scoreDish(d,basket,ci,judgeIdx){
@@ -2583,7 +2708,7 @@ function aiDish(seed,chef,round,K,judgeIdx){const r=rngFrom(seed+'|ai|'+chef.id+
   for(const c of best.comps)c.out=rollOut(c,r,K.aiRisk);
   best.left=budget-dishTime(best).a;return best}
 function cleanDish(d,round,K,perk){try{if(!d||!Array.isArray(d.comps))return null;const comps=[];
-  for(const c of d.comps.slice(0,4)){if(!c||!ROLES[c.role]||!T[c.tech]||K.ban.includes(c.tech)||!Array.isArray(c.ings))return null;const ings=[...new Set(c.ings.filter(id=>typeof id==='string'&&Object.prototype.hasOwnProperty.call(I,id)))].slice(0,3);
+  for(const c of d.comps.slice(0,4)){if(!c||!ROLES[c.role]||!T[c.tech]||K.ban.includes(c.tech)||!Array.isArray(c.ings))return null;const ings=[...new Set(c.ings.filter(id=>typeof id==='string'&&Object.prototype.hasOwnProperty.call(I,id)))].slice(0,MAXI);
     if(!ings.length||![0,1,2].includes(c.pace)||![0,1,2,3].includes(c.out))return null;comps.push({role:c.role,ings,tech:c.tech,pace:c.pace,out:c.out})}
   const out={comps,fin:[...new Set((Array.isArray(d.fin)?d.fin:[]).filter(f=>Object.prototype.hasOwnProperty.call(FIN,f)))].slice(0,3),plate:[0,1,2].includes(d.plate)?d.plate:0,left:clamp(+d.left||0,0,30)};
   const pk=Object.prototype.hasOwnProperty.call(PERKS,perk)?perk:'';if(!feasible(out,budgetFor(round,K),pk))return null;return out}catch(e){return null}}
@@ -2624,12 +2749,12 @@ let ST={cur:'',chefs:{}},saveErr=false;
 try{const j=JSON.parse(localStorage.getItem(KEY)||'null');if(j&&j.chefs&&typeof j.chefs==='object'&&!Array.isArray(j.chefs))ST={cur:String(j.cur||''),chefs:j.chefs}}catch(e){}
 const rid=n=>Array.from({length:n},()=>ALPHA[Math.floor(Math.random()*32)]).join('').toLowerCase();
 const cleanName=s=>String(s||'').replace(/[\u0000-\u001f<>]/g,'').trim().slice(0,14);
-const blank=name=>({name,pid:rid(10),cleared:{},lvl:0,diff:2,cash:0,played:0,best:0,known:{},perk:'knives',pressure:false,match:null,look:{g:'',j:0,a:1}});
+const blank=name=>({name,pid:rid(10),cleared:{},lvl:0,diff:2,cash:0,played:0,best:0,known:{},perk:'knives',pressure:false,match:null,look:{g:'',j:0,a:1},seen:[]});
 function cleanChef(o){if(!o||typeof o!=='object')return null;const c=blank(cleanName(o.name)||'Chef');
   if(o.cleared&&typeof o.cleared==='object')for(let l=0;l<50;l++){const v=o.cleared[l];if(Number.isInteger(v)&&v>=1&&v<=6)c.cleared[l]=v}
   if(o.known&&typeof o.known==='object')for(const k of Object.keys(o.known).slice(0,4000)){const[a,b]=k.split('|');if(has(I,a)&&has(T,b||''))c.known[k]=1}
   c.cash=clamp(Math.floor(+o.cash||0),0,1e9);c.played=clamp(Math.floor(+o.played||0),0,1e6);c.best=clamp(+o.best||0,0,90);c.diff=[0,1,2,3,4,5].includes(o.diff)?o.diff:2;
-  c.perk=has(PERKS,o.perk)?o.perk:'knives';c.pressure=!!o.pressure;c.look=cleanLook(o.look);return c}
+  c.perk=has(PERKS,o.perk)?o.perk:'knives';c.pressure=!!o.pressure;c.look=cleanLook(o.look);c.seen=(Array.isArray(o.seen)?o.seen:[]).filter(id=>typeof id==='string'&&has(I,id)).slice(-90);return c}
 for(const id of Object.keys(ST.chefs)){const m=ST.chefs[id]&&ST.chefs[id].match,pid=ST.chefs[id]&&ST.chefs[id].pid,c=cleanChef(ST.chefs[id]);if(!c||!/^[a-z0-9]{4,12}$/.test(id)){delete ST.chefs[id];continue}
   if(typeof pid==='string'&&/^[a-z0-9]{10}$/.test(pid))c.pid=pid;c.lvl=clamp(Math.floor(+ST.chefs[id].lvl||0),0,49);c.match=m&&typeof m==='object'?m:null;ST.chefs[id]=c}
 let S=ST.chefs[ST.cur]||null;
@@ -2643,7 +2768,10 @@ let DB=null,unsub=null,live={on:false,err:false},writeQ=Promise.resolve();
 const K=()=>KC||(KC=makeCfg(M.lvl,M.diff));
 /* ---- match set-up ---- */
 function validPerk(){return PERKS[S.perk]&&totalWins()>=PERKS[S.perk].wins?S.perk:'knives'}
-function newMatch(mode,lvl,diff,code){const seed=mode==='duel'?'duel:'+code:'solo:'+Date.now()+':'+Math.random();KC=null;
+// Baskets come from the match seed. Try many seeds and keep the one that repeats the least of what this chef was dealt lately.
+function staleness(seed,cfg){const all=[0,1,2].flatMap(r=>pickBasket(seed,r,cfg)),n=S.seen.length;let p=(all.length-new Set(all).size)*40;for(const id of all){const k=S.seen.lastIndexOf(id);if(k>=0)p+=n-k<=30?6:n-k<=60?3:1}return p}
+function freshest(make,cfg){let best=null,bp=1e9;for(let i=0;i<60;i++){const c=make(),p=staleness(c.seed,cfg);if(p<bp){bp=p;best=c;if(!p)break}}return best}
+function newMatch(mode,lvl,diff,code){const seed=mode==='duel'?'duel:'+code:freshest(()=>({seed:'solo:'+Date.now()+':'+Math.random()}),makeCfg(lvl,diff)).seed;KC=null;
   M={mode,lvl,diff,code:code||'',seed,perk:validPerk(),round:0,judges:pickJudges(seed),chefs:null,alive:null,dishes:{me:[],opp:[]},totals:{},fin:null};
   const rivals=pickRivals(seed,mode==='duel'?2:3);
   M.chefs=[{id:'me',name:S.name,human:1}].concat(mode==='duel'?[{id:'opp',name:'Rival chef',human:1}]:[],rivals.map(c=>({id:c.id,name:c.name,tag:c.tag,style:c.style})));
@@ -2671,6 +2799,7 @@ function livePill(){if(!M||M.mode!=='duel')return '';const opp=M.chefs.find(c=>c
 if(window.claude&&window.claude.use)window.claude.use('db').then(d=>{DB=d;if(d)liveStart()}).catch(()=>{});
 /* ---- navigation ---- */
 function go(s){screen=s;stage=0;sheet=null;clearInterval(tick);tick=null;
+  if(s==='basket'&&M){const b=basket();if(!b.every(id=>S.seen.slice(-b.length).includes(id))){S.seen=S.seen.filter(id=>!b.includes(id)).concat(b).slice(-90);save()}}
   if(s==='plan'){P={comps:[{role:'main',ings:[],tech:null,pace:1,out:2}],fin:[],plate:1,left:0};if(S.pressure){deadline=Date.now()+budget()*6000;tick=setInterval(pressTick,500)}}
   render();window.scrollTo(0,0)}
 function pressTick(){const left=Math.max(0,deadline-Date.now()),el=$('#press');if(el)el.textContent=fmtSec(left);if(left<=0){clearInterval(tick);tick=null;sheet=null;
@@ -2760,10 +2889,10 @@ function vPlan(){const st=planStats(),C=COURSES[M.round],b=basket(),usedIds=new 
  ${P.comps.map((c,i)=>{const t=c.tech&&T[c.tech],tm=compTime(c,M.perk);return `<section class="panel comp">
   <div class="row" style="justify-content:space-between"><div class="seg">${Object.entries(ROLES).map(([k,r])=>`<button data-a="role" data-i="${i}" data-v="${k}" aria-pressed="${c.role===k}">${r.name}</button>`).join('')}</div>${P.comps.length>1?`<button class="btn ghost" style="min-height:38px;padding:6px 12px" data-a="delc" data-i="${i}" aria-label="Remove component">Remove</button>`:''}</div>
   <div class="row">${c.ings.map((id,k)=>`<button class="chip ${k?'':'lead'} ${ing(id).pantry?'':'b'}" data-a="chip" data-i="${i}" data-k="${k}" title="${k?'Tap to make this the lead':'Lead ingredient. Tap to remove'}">${ing(id).em} ${ing(id).name}${k?'':' <span class="x">lead</span>'}</button>`).join('')}
-   ${c.ings.length<3?`<button class="chip" data-a="pick" data-i="${i}">+ ingredient</button>`:''}</div>
+   ${c.ings.length<MAXI?`<button class="chip" data-a="pick" data-i="${i}">+ ingredient</button>`:''}</div>
   <div class="row"><button class="btn" data-a="tech" data-i="${i}" ${c.ings.length?'':'disabled'}>${t?t.name:'Choose a technique'}</button>
    <div class="seg">${['Rush','Steady','Careful'].map((n,k)=>`<button data-a="pace" data-i="${i}" data-v="${k}" aria-pressed="${c.pace===k}">${n}</button>`).join('')}</div></div>
-  ${t?`<div class="stat"><span>${tm.a} min hands-on${tm.p?' + '+tm.p+' unattended':''}</span>${fitTag(c.ings[0],c.tech)}${riskTag(c)}<span>${['','simple cooking','transforms it'][t.lvl]||'untouched'}</span></div>`:`<p class="small mute">${c.ings.length?'The lead ingredient decides whether the technique works.':'Add up to three ingredients. The first one leads.'}</p>`}
+  ${t?`<div class="stat"><span>${tm.a} min hands-on${tm.p?' + '+tm.p+' unattended':''}</span>${fitTag(c.ings[0],c.tech)}${riskTag(c)}<span>${['','simple cooking','transforms it'][t.lvl]||'untouched'}</span></div>`:`<p class="small mute">${c.ings.length?'The lead ingredient decides whether the technique works.':'Add up to six ingredients. The first one leads. Each extra one costs a minute.'}</p>`}
  </section>`}).join('')}
  ${P.comps.length<4?'<button class="btn wide" data-a="addc">+ Add a component</button>':''}
  <section class="panel"><h3>Finish and plate</h3><div class="row">${Object.entries(FIN).map(([k,f])=>`<button class="chip" data-a="fin" data-id="${k}" aria-pressed="${P.fin.includes(k)}">${f.name}</button>`).join('')}</div><p class="small mute">Up to three finishing touches. They cost no time.</p>
@@ -2786,13 +2915,22 @@ function vSheet(){const s=sheet;let h='';
   <div style="display:flex;justify-content:center">${avatar(S.look,120)}</div>
   ${S.look.g?'':`<div class="seg"><button data-a="sg" data-v="w">Woman</button><button data-a="sg" data-v="m">Man</button></div><span class="small mute">Pick once. This cannot be changed afterwards.</span>`}
   ${swatches('sj',S.look.j,'Jacket')}${swatches('sa',S.look.a,'Apron')}<p class="small mute">Saved as you tap.</p>`}
- if(s.t==='pick'){const c=P.comps[s.i],b=basket();h=`<div class="row" style="justify-content:space-between"><h2>Add ingredients</h2><button class="btn go" style="min-height:44px;font-size:18px" data-a="close">Done</button></div>
-  <p class="small mute">Up to three per component. The first one you add leads.</p><h3>Basket</h3>${bgrid(b,id=>tile(id,c.ings.includes(id)?'sel':'','add'))}
-  <h3>Pantry</h3><div class="pgrid">${PANTRY.filter(id=>!K().short.includes(id)).map(id=>tile(id,c.ings.includes(id)?'sel':'','add')).join('')}</div>`}
+ if(s.t==='pick'){const c=P.comps[s.i],b=basket(),pan=PANTRY.filter(id=>!K().short.includes(id));
+  const key=id=>esc((ing(id).name+' '+CATNAME[ing(id).cat]+' '+AX.filter((_,j)=>ing(id).f[j]>=3).join(' ')).toLowerCase());
+  const pt=id=>`<button class="tile ${c.ings.includes(id)?'sel':''}" data-a="add" data-id="${id}" data-k="${key(id)}"><span class="em">${ing(id).em}</span><span>${ing(id).name}</span>${ing(id).odd?'<span class="odd">oddball</span>':''}</button>`;
+  h=`<div class="picktop"><div class="row" style="justify-content:space-between;flex-wrap:nowrap"><h2>Ingredients</h2><button class="btn go" style="min-height:44px;font-size:18px" data-a="close">Done</button></div>
+   <input type="search" id="isearch" placeholder="Search ${pan.length+b.length} ingredients" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" aria-label="Search ingredients">
+   <p class="small mute" id="pickcount">${pickCount(c)}</p></div>
+  <div class="pg"><h3>Basket</h3><div class="pgrid">${b.map(pt).join('')}</div></div>
+  ${PGROUPS.map(([name,cats])=>{const ids=pan.filter(id=>cats.includes(ing(id).cat));return ids.length?`<div class="pg"><h3>${name}</h3><div class="pgrid">${ids.map(pt).join('')}</div></div>`:''}).join('')}
+  <p class="mute" id="nomatch" hidden>Nothing in the kitchen matches that. Try a shorter word, or a taste such as sour or salty.</p>`}
  if(s.t==='tech'){const c=P.comps[s.i],lead=c.ings[0];h=`<div class="row" style="justify-content:space-between"><h2>Technique</h2><button class="btn" data-a="close">Close</button></div>
   <p class="small mute">For ${ing(lead).em} ${ing(lead).name}. Times are hands-on + unattended minutes at a steady pace.</p>
   <div class="col">${TECH.map(t=>{const ban=K().ban.includes(t.id);return `<button class="trow ${ban?'lock':''}" data-a="settech" data-i="${s.i}" data-id="${t.id}" aria-pressed="${c.tech===t.id}" ${ban?'disabled':''}><b>${t.name}</b><span class="mono small">${t.a}${t.p?' + '+t.p:''} min</span><span class="small mute">${ban?'Station down for this level':['Leaves it as it is','Simple cooking','Transforms the ingredient'][t.lvl]}</span>${ban?'<span></span>':fitTag(lead,t.id)}</button>`}).join('')}</div>`}
  return `<div class="scrim" data-a="scrim"><div class="sheet" role="dialog" aria-modal="true">${h}</div></div>`}
+const PGROUPS=[['Produce','VF'],['Meat','PS'],['Dairy and eggs','D'],['Dry goods','C'],['Sauces and liquids','X'],['Herbs and spices','H'],['Sweet things and nuts','WN']];
+const pickCount=c=>c.ings.length?c.ings.length+' of '+MAXI+' chosen: '+c.ings.map(id=>ing(id).name).join(', ')+'. The first one leads.':'Choose up to '+MAXI+'. The first one you tap leads. Search by name, type or taste.';
+function filterPick(q){q=q.trim().toLowerCase();let any=false;document.querySelectorAll('#sheet .pg').forEach(g=>{let n=0;g.querySelectorAll('.tile').forEach(t=>{const ok=!q||q.split(/\s+/).every(w=>t.dataset.k.includes(w));t.hidden=!ok;if(ok)n++});g.hidden=!n;if(n)any=true});const m=$('#nomatch');if(m)m.hidden=any}
 const OUT=[['Ruined','bad'],['Flawed','warm'],['Good','cool'],['Perfect','good']];
 function vService(){const done=SV.i>=P.comps.length;return `<div class="rail"><div class="clock">${SV.left}<span style="font-size:14px">m</span></div><div class="meta"><span class="small"><b>Service</b> · minutes in hand</span><span class="small mute mono">${done?'Everything is off the heat.':'Cooking…'}</span></div></div>
  <h2>${done?'Hands up':'On the heat'}</h2>
@@ -2871,7 +3009,7 @@ const ACT={
  lvl:d=>{const l=+d.i;if(l>=0&&l<50&&lvlOpen(l)){S.lvl=l;save();render()}},diff:d=>{S.diff=clamp(+d.i,0,5);save();render()},perk:d=>{S.perk=d.id;save();render()},press:d=>{S.pressure=d.v==='1';save();render()},
  solo:()=>newMatch('solo',lvlOpen(S.lvl)?S.lvl:0,S.diff),
  again:d=>{const l=clamp(+d.i,0,49);S.lvl=lvlOpen(l)?l:0;newMatch('solo',S.lvl,M.diff)},
- host:()=>{newMatch('duel',-1,S.diff,newCode(S.diff));screen='lobby';render()},
+ host:()=>{const cfg=makeCfg(-1,S.diff);newMatch('duel',-1,S.diff,freshest(()=>{const code=newCode(S.diff);return{seed:'duel:'+code,code}},cfg).code);screen='lobby';render()},
  join:()=>{const c=($('#jc').value||'').toUpperCase().trim();if(!okCode(c)){joinErr='That code should be 5 letters and numbers.';render();return}joinErr='';newMatch('duel',-1,codeDiff(c),c)},
  resume:()=>{if(!okMatch(S.match)){S.match=null;save();render();return}KC=null;M=JSON.parse(JSON.stringify(S.match));M.fin=null;M.chefs.find(c=>c.id==='me').name=S.name;if(M.mode==='duel')liveStart();if(M.round>2){M.round=2;endDuel();return}go('basket')},
  quit:()=>{liveStop();if(M&&M.fin&&!(M.mode==='duel'&&M.dishes.opp.length<3)){S.match=null;save()}M=null;KC=null;joinErr='';go('menu')},
@@ -2880,7 +3018,8 @@ const ACT={
  addc:()=>{const used=P.comps.map(c=>c.role),role=['main','side','sauce','garnish'].find(r=>!used.includes(r))||'side';P.comps.push({role,ings:[],tech:null,pace:1,out:2});render()},
  delc:d=>{P.comps.splice(+d.i,1);render()},role:d=>{P.comps[+d.i].role=d.v;render()},pace:d=>{P.comps[+d.i].pace=+d.v;render()},
  pick:d=>{sheet={t:'pick',i:+d.i};render()},tech:d=>{sheet={t:'tech',i:+d.i};render()},
- add:d=>{const c=P.comps[sheet.i],k=c.ings.indexOf(d.id);if(k>=0)c.ings.splice(k,1);else if(c.ings.length<3)c.ings.push(d.id);if(!c.ings.length)c.tech=null;render()},
+ add:(d,e)=>{const c=P.comps[sheet.i],k=c.ings.indexOf(d.id);if(k>=0)c.ings.splice(k,1);else if(c.ings.length<MAXI)c.ings.push(d.id);else{const pc=$('#pickcount');if(pc){pc.textContent='That is the limit of '+MAXI+'. Tap a chosen ingredient to take it out.';pc.className='small bad'}return}if(!c.ings.length)c.tech=null;
+  document.querySelectorAll('#sheet .tile').forEach(t=>t.classList.toggle('sel',c.ings.includes(t.dataset.id)));const pc=$('#pickcount');if(pc){pc.textContent=pickCount(c);pc.className='small mute'}},
  chip:d=>{const c=P.comps[+d.i],k=+d.k;if(k===0){c.ings.shift();if(!c.ings.length)c.tech=null}else{const[x]=c.ings.splice(k,1);c.ings.unshift(x)}render()},
  settech:d=>{if(K().ban.includes(d.id))return;P.comps[+d.i].tech=d.id;sheet=null;render()},
  fin:d=>{const k=P.fin.indexOf(d.id);if(k>=0)P.fin.splice(k,1);else if(P.fin.length<3)P.fin.push(d.id);render()},plate:d=>{P.plate=+d.v;render()},
@@ -2896,7 +3035,7 @@ const ACT={
 };
 function endDuel(){if(!M.fin)M.fin={duel:1};if(M.dishes.opp.length>=3&&!M.fin.counted){M.fin.counted=1;S.played++;S.match=null;save()}screen='final';sheet=null;render();window.scrollTo(0,0)}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-a]');if(!b||b.disabled)return;const f=ACT[b.dataset.a];if(f)f(b.dataset,e)});
-document.addEventListener('input',e=>{if(e.target.id==='nm')draft.name=e.target.value});
+document.addEventListener('input',e=>{if(e.target.id==='nm')draft.name=e.target.value;if(e.target.id==='isearch')filterPick(e.target.value)});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&sheet){sheet=null;render()}});
 render();
 }
